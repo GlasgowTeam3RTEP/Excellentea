@@ -37,10 +37,6 @@ Have your cup of tea ready with just a click!
 
 [//]: # ( Dropwizard- The web framework used)
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/andreaspanou/Excellentea) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
 [//]: # (We use SemVer for versioning. For the versions available, see the LINK tags on this repository) 
@@ -55,7 +51,7 @@ See also the list of [contributors](https://github.com/GlasgowTeam3RTEP/Excellen
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
