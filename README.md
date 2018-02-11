@@ -24,7 +24,7 @@ It also comes with the option of  controlling the machine using control buttons 
 
 ### Prerequisites
 
-For the remote control internet access is required
+For remote control internet access is required
 
 ### Installing
 
@@ -36,16 +36,23 @@ For the remote control internet access is required
 
 [//]: # (instruct other people on how to use your project after they’ve installed it)
 Step 1: Load your cup with water
+
 Step 2: Load your tea strainer with the tea of your choice
 
 For remote control: 
+
 Step 3: Activate the tea maker from the online user interface
+
 Step 4: Choose the brewing mode of your tea
+
 For on machine control: 
+
 Step 3: Activate using activation button
+
 Step 4: Navigate with control buttons and select your prefered mode
 
 Step 5: Wait... Tea is ready:)
+
 ### Break down into end to end tests
 
 [//]: # (Explain what these tests test and why)
