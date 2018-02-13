@@ -64,7 +64,7 @@ Step 5: Wait... Tea is ready:)
 
 ### Program flow
 
-
+![alt text](http://https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Program_flow.png/to/img.png)
 
 ### Code
 
