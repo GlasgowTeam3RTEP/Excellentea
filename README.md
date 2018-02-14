@@ -6,11 +6,12 @@ Have your cup of tea ready with just a click!
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
 In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
 It also comes with the option of  controlling the machine using control buttons and an LCD display.
-
+<p align="center">
 <a href="https://www.youtube.com/watch?v=Gr951TFXX7w
 " target="_blank"><img src="http://img.youtube.com/vi/Gr951TFXX7w/0.jpg" 
-alt="Promotional video" width="240" height="180" border="10" /></a>
- 
+alt="Promotional video" width="360" height="270" border="10" /></a>
+</p>
+
 ## Usage
 
 ### User operation
