@@ -1,10 +1,10 @@
-# ExcellenTea
+# Excellentea
 Have your cup of tea ready with just a click!
 
 ## Description
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
-In simpler words you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
+In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
 It also comes with the option of  controlling the machine using control buttons and an LCD display. 
 
 ### Required hardware (part number)
@@ -13,7 +13,7 @@ It also comes with the option of  controlling the machine using control buttons 
 - 1 digital temperature sensor (ds18b20)
 - DC power supply 
 - 1 heating element (12V) (B004O8BGXE)
-- 1 tea strainer 
+- 1 tea infuser 
 - 1 reed float sensor (59630)
 - 2 18-pin through hole socket (ED18DT)
 - 2 Bipolar transistor array (ULN2803A)
@@ -24,7 +24,7 @@ It also comes with the option of  controlling the machine using control buttons 
 
 ### Protocol
 
-I2C
+1-wire
 
 ### Prerequisites
 
@@ -44,23 +44,23 @@ Software impementation: access to RPI and Debian
 [//]: # (instruct other people on how to use your project after they’ve installed it)
 # Tea maker usage:
 
-Step 1: Load your cup with water
+Step 1: Fill your cup with water
 
-Step 2: Load your tea strainer with the tea of your choice
+Step 2: Fill your tea infuser with the tea of your choice
 
 For remote control: 
 
 Step 3: Activate the tea maker from the online user interface
 
-Step 4: Choose the brewing mode of your tea
+Step 4: Choose the brewing mode for your tea
 
-For on machine control: 
+For on-machine control: 
 
 Step 3: Activate using activation button
 
 Step 4: Navigate with control buttons and select your prefered mode
 
-Step 5: Wait... Tea is ready:)
+Step 5: Wait ... tea is ready:)
 
 ### Program flow
 
