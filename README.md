@@ -7,24 +7,31 @@ Excellentea is an automatic tea maker. The user can operate the machine remotely
 In simpler words you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
 It also comes with the option of  controlling the machine using control buttons and an LCD display. 
 
-### Required hardware
+### Required hardware (part number)
 
-- 2 stepper motors
-- 1 digital temperature sensor
-- DC power supply
-- 1 heating element (12V)
-- 1 tea strainer
-- 1 reed float sensor
-- 2 18-pin through hole socket
-- 2 Bipolar transistor array
+- 1 stepper motor (MIKROE-1530)
+- 1 digital temperature sensor (ds18b20)
+- DC power supply 
+- 1 heating element (12V) (B004O8BGXE)
+- 1 tea strainer 
+- 1 reed float sensor (59630)
+- 2 18-pin through hole socket (ED18DT)
+- 2 Bipolar transistor array (ULN2803A)
 - LCD
-- MOSFET heat sink
-- casing material
-- 2 N-channel logic-level MOSFET
+- MOSFET heat sink (507222B00000G)
+- casing material 
+- 2 N-channel logic-level MOSFET (FQP30N06L)
+
+### Protocol
+
+I2C
 
 ### Prerequisites
 
-For remote control internet access is required
+Machine operation: For remote control internet access is required
+
+Software impementation: access to RPI and Debian
+
 
 ### Installing
 
@@ -35,6 +42,8 @@ For remote control internet access is required
 ## Usage
 
 [//]: # (instruct other people on how to use your project after they’ve installed it)
+# Tea maker usage:
+
 Step 1: Load your cup with water
 
 Step 2: Load your tea strainer with the tea of your choice
@@ -53,15 +62,16 @@ Step 4: Navigate with control buttons and select your prefered mode
 
 Step 5: Wait... Tea is ready:)
 
-### Break down into end to end tests
+### Program flow
+
+![Alt text](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Program_flow.png?raw=true "Title")
+
+### Code
 
 [//]: # (Explain what these tests test and why)
 
 [//]: # (```  Give an example ```)
 
-### And coding style tests
-
-[//]: # (Explain what these tests test and why)
 
 ## Deployment
 
