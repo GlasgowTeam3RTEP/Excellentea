@@ -5,85 +5,72 @@ Have your cup of tea ready with just a click!
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
 In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
-It also comes with the option of  controlling the machine using control buttons and an LCD display. 
+It also comes with the option of  controlling the machine using control buttons and an LCD display.
 
-### Required hardware (part number)
+<a href="https://www.youtube.com/watch?v=Gr951TFXX7w
+" target="_blank"><img src="http://img.youtube.com/vi/Gr951TFXX7w/0.jpg" 
+alt="Promotional video" width="240" height="180" border="10" /></a>
+ 
+## Usage
 
-- 1 stepper motor (MIKROE-1530)
-- 1 digital temperature sensor (ds18b20)
-- DC power supply 
+### User operation
+[//]: # (instruct other people on how to use your project after they’ve installed it)
+
+1. Load your cup with water
+
+2. Load your tea infuser with the tea of your choice
+---
+
+For remote control: 
+
+3. Activate the tea maker from the online user interface
+
+4. Choose the brewing mode of your tea
+---
+
+For on-machine control: 
+
+3. Activate using inbuilt interface
+
+4. Navigate with control buttons and select your preferred program
+---
+
+5. Wait...tea is ready:)
+
+
+## Hardware
+
+### Key components
+
+- 1 Raspberry PI microcontroller board (tested on version 3 Model B)
+- 1 Stepper motor (MIKROE-1530)
+- 1 Digital temperature sensor (ds18b20)
+- 12V DC power supply 
 - 1 heating element (12V) (B004O8BGXE)
 - 1 tea infuser 
 - 1 reed float sensor (59630)
 - 2 18-pin through hole socket (ED18DT)
 - 2 Bipolar transistor array (ULN2803A)
 - LCD
-- MOSFET heat sink (507222B00000G)
-- casing material 
 - 2 N-channel logic-level MOSFET (FQP30N06L)
+- MOSFET heat sink (507222B00000G)
+
+### Additional components
+The project also requires standard passive components (e.g. resistors), prototyping tools (e.g. breadboard/pcb) and materials for the encasing. See the [circuit schematics](Main.sch) for details. 
 
 ### Protocol
 
-1-wire
+The digital temperature sensor DS18B20 communicates with the board through a 1-wire protocol wired on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required. 
 
 ### Prerequisites
 
-Machine operation: For remote control internet access is required
+The raspberry PI must be connected to the internet for remote access.
 
-Software impementation: access to RPI and Debian
+## Software
 
+### Flow diagram
 
-### Installing
-
-[//]: # (A step by step series of examples that tell you have to get a development env running. Say what the step will be)
-
-[//]: # (End with an example of getting some data out of the system or using it for a little demo)
-
-## Usage
-
-[//]: # (instruct other people on how to use your project after they’ve installed it)
-# Tea maker usage:
-
-Step 1: Fill your cup with water
-
-Step 2: Fill your tea infuser with the tea of your choice
-
-For remote control: 
-
-Step 3: Activate the tea maker from the online user interface
-
-Step 4: Choose the brewing mode for your tea
-
-For on-machine control: 
-
-Step 3: Activate using activation button
-
-Step 4: Navigate with control buttons and select your prefered mode
-
-Step 5: Wait ... tea is ready:)
-
-### Program flow
-
-![Alt text](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Program_flow.png?raw=true "Title")
-
-### Code
-
-[//]: # (Explain what these tests test and why)
-
-[//]: # (```  Give an example ```)
-
-
-## Deployment
-
-[//]: # (Add additional notes about how to deploy this on a live system)
-
-## Built With
-
-[//]: # ( Dropwizard- The web framework used)
-
-## Versioning
-
-[//]: # (We use SemVer for versioning. For the versions available, see the LINK tags on this repository) 
+![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Program_flow.png?raw=true "Title")
 
 ## Authors
 
@@ -103,4 +90,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-[//]: # (Hat tip to anyone who's code was used, Inspiration, etc)
+We would like to thank the weather in Glasgow for making us think about tea all the time.
