@@ -1,3 +1,4 @@
+![Excellentea](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner.png "Excellentea")
 # Excellentea
 Have your cup of tea ready with just a click!
 
@@ -71,7 +72,7 @@ The raspberry PI must be connected to the internet for remote access.
 
 ### Flow diagram
 
-![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Program_flow.png?raw=true "Title")
+![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Program_flow.png "Flow diagram of the tea maker")
 
 ## Authors
 
