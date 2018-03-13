@@ -1,8 +1,5 @@
-![Excellentea](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner.png "Excellentea")
-# Excellentea
-Have your cup of tea ready with just a click!
-
-## Description
+<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner.png" alt="Excellentea" width="1000">
+# Description
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
 In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
@@ -13,9 +10,9 @@ It also comes with the option of  controlling the machine using control buttons 
 alt="Promotional video" width="360" height="270" border="10" /></a>
 </p>
 
-## Usage
+# Usage
 
-### User operation
+## User operation
 [//]: # (instruct other people on how to use your project after they’ve installed it)
 
 1. Load your cup with water
@@ -40,9 +37,9 @@ For on-machine control:
 5. Wait...tea is ready:)
 
 
-## Hardware
+# Hardware
 
-### Key components
+## Key components
 
 - 1 Raspberry PI microcontroller board (tested on version 3 Model B)
 - 1 Stepper motor (MIKROE-1530)
@@ -57,24 +54,24 @@ For on-machine control:
 - 2 N-channel logic-level MOSFET (FQP30N06L)
 - MOSFET heat sink (507222B00000G)
 
-### Additional components
+## Additional components
 The project also requires standard passive components (e.g. resistors), prototyping tools (e.g. breadboard/pcb) and materials for the encasing. See the [circuit schematics](Main.sch) for details. 
 
-### Protocol
+## Protocol
 
 The digital temperature sensor DS18B20 communicates with the board through a 1-wire protocol wired on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required. 
 
-### Prerequisites
+## Prerequisites
 
 The raspberry PI must be connected to the internet for remote access.
 
-## Software
+# Software
 
-### Flow diagram
+## Flow diagram
 
 ![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Program_flow.png "Flow diagram of the tea maker")
 
-## Authors
+# Authors
 
 * [**Andrea Spanou**](https://github.com/andreaspanou) - *Initial work* 
 * [**Ciaran McGeady**](https://github.com/CiaranAnthony) - *Initial work*
@@ -82,14 +79,14 @@ The raspberry PI must be connected to the internet for remote access.
 
 See also the list of [contributors](https://github.com/GlasgowTeam3RTEP/ExcellenTea/contributors) who participated in this project.
 
-## Contributing
+# Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+# Acknowledgments
 
 We would like to thank the weather in Glasgow for making us think about tea all the time.
