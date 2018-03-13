@@ -1,4 +1,5 @@
 <img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner.png" alt="Excellentea" width="1000">
+
 # Description
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
