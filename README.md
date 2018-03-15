@@ -4,14 +4,26 @@
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
 In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
-It also comes with the option of  controlling the machine using control buttons and an LCD display.
-<p align="center">
-<a href="https://www.youtube.com/watch?v=Gr951TFXX7w
-" target="_blank"><img src="http://img.youtube.com/vi/Gr951TFXX7w/0.jpg" 
-alt="Promotional video" width="360" height="270" border="10" /></a>
-</p>
+It also comes with the option of controlling the machine using control buttons and an LCD display.
 
 # Usage
+
+## Installation
+
+Clone the repository to your Raspberry Pi and run the following commands:
+
+```
+./configure
+make
+make install
+```
+The program can then be started by running the command
+
+```
+excellentea
+```
+from the terminal.
+
 
 ## User operation
 [//]: # (instruct other people on how to use your project after they’ve installed it)
@@ -50,7 +62,7 @@ For on-machine control:
 - 1 tea infuser 
 - 1 reed float sensor (59630)
 - 2 18-pin through hole socket (ED18DT)
-- 2 Bipolar transistor array (ULN2803A)
+- 2 Darlington transistor array (ULN2803A)
 - LCD
 - 2 N-channel logic-level MOSFET (FQP30N06L)
 - MOSFET heat sink (507222B00000G)
@@ -60,7 +72,7 @@ The project also requires standard passive components (e.g. resistors), prototyp
 
 ## Protocol
 
-The digital temperature sensor DS18B20 communicates with the board through a 1-wire protocol wired on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required. 
+The digital temperature sensor DS18B20 communicates with the board through a 1-wire protocol on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required. 
 
 ## Prerequisites
 
