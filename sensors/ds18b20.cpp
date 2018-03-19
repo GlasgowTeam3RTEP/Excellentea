@@ -7,13 +7,21 @@
 #include "sensor.h"
 #include "ds18b20.h"
 
+/** Class constructor.
+ *	Build a temperature sensor object with the pin number and the unique device ID.
+ @param GPIO pin number (wiringPi convention)
+ @param dev_id device ID on the bus as a string 
+*/ 
 ds18b20::ds18b20(short GPIO, std::string dev_id) : sensor(GPIO)
 {
 	pin = GPIO;
 	device_id = dev_id;
 }
 
-void ds18b20::initialize()
+ /** Initialisation procedure.
+ *	Activates the one-wire interface from the Raspberry PI.
+  */
+void ds18b20::initialise()
 {
 	system("sudo modprobe w1-gpio"); //Activate one-wire interface 
 	system("sudo modprobe w1-therm"); //^^	
