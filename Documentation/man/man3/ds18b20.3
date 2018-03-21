@@ -1,4 +1,4 @@
-.TH "ds18b20" 3 "Sat Mar 17 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.TH "ds18b20" 3 "Wed Mar 21 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,11 +23,9 @@ Inherits \fBsensor\fP\&.
 .br
 .RI "Initialisation procedure\&. "
 .ti -1c
-.RI "void \fBsetId\fP (std::string dev_id)"
-.br
-.ti -1c
 .RI "double \fBreadTemp\fP ()"
 .br
+.RI "Read the temperature from the sensor\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -57,6 +55,10 @@ Class constructor\&. Build a temperature sensor object with the pin number and t
 Initialisation procedure\&. Activates the one-wire interface from the Raspberry PI\&. 
 .PP
 Reimplemented from \fBsensor\fP\&.
+.SS "double ds18b20::readTemp ()"
+
+.PP
+Read the temperature from the sensor\&. Request the temperature value from the sensor and returns a double precision value\&. 
 
 .SH "Author"
 .PP 

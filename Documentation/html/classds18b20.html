@@ -104,7 +104,7 @@ Inheritance diagram for ds18b20:</div>
 <div class="dyncontent">
 <div class="center"><img src="classds18b20__inherit__graph.png" border="0" usemap="#ds18b20_inherit__map" alt="Inheritance graph"/></div>
 <map name="ds18b20_inherit__map" id="ds18b20_inherit__map">
-<area shape="rect" id="node2" href="classsensor.html" title="A general class for simple sensors. " alt="" coords="10,5,71,32"/>
+<area shape="rect" id="node2" href="classsensor.html" title="A general class for simple HIGH/LOW sensors. " alt="" coords="10,5,71,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -112,7 +112,7 @@ Collaboration diagram for ds18b20:</div>
 <div class="dyncontent">
 <div class="center"><img src="classds18b20__coll__graph.png" border="0" usemap="#ds18b20_coll__map" alt="Collaboration graph"/></div>
 <map name="ds18b20_coll__map" id="ds18b20_coll__map">
-<area shape="rect" id="node2" href="classsensor.html" title="A general class for simple sensors. " alt="" coords="10,5,71,32"/>
+<area shape="rect" id="node2" href="classsensor.html" title="A general class for simple HIGH/LOW sensors. " alt="" coords="10,5,71,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -124,11 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a222d770b98aa7c0d6ae27da9756c8979"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classds18b20.html#a222d770b98aa7c0d6ae27da9756c8979">initialise</a> ()</td></tr>
 <tr class="memdesc:a222d770b98aa7c0d6ae27da9756c8979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation procedure.  <a href="#a222d770b98aa7c0d6ae27da9756c8979">More...</a><br /></td></tr>
 <tr class="separator:a222d770b98aa7c0d6ae27da9756c8979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad67e2e862e0d89ba93ee873e3977bd7b"><td class="memItemLeft" align="right" valign="top"><a id="ad67e2e862e0d89ba93ee873e3977bd7b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (std::string dev_id)</td></tr>
-<tr class="separator:ad67e2e862e0d89ba93ee873e3977bd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479caadfcbf4b1d0fd0867a440900e7d"><td class="memItemLeft" align="right" valign="top"><a id="a479caadfcbf4b1d0fd0867a440900e7d"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>readTemp</b> ()</td></tr>
+<tr class="memitem:a479caadfcbf4b1d0fd0867a440900e7d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classds18b20.html#a479caadfcbf4b1d0fd0867a440900e7d">readTemp</a> ()</td></tr>
+<tr class="memdesc:a479caadfcbf4b1d0fd0867a440900e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the temperature from the sensor.  <a href="#a479caadfcbf4b1d0fd0867a440900e7d">More...</a><br /></td></tr>
 <tr class="separator:a479caadfcbf4b1d0fd0867a440900e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -199,6 +196,26 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>readTemp</b> ()</td
 <p class="">Activates the one-wire interface from the Raspberry PI. </p>
 
 <p>Reimplemented from <a class="el" href="classsensor.html#ae1073389f46dd119e2f421a894b7d781">sensor</a>.</p>
+
+</div>
+</div>
+<a id="a479caadfcbf4b1d0fd0867a440900e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479caadfcbf4b1d0fd0867a440900e7d">&#9670;&nbsp;</a></span>readTemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ds18b20::readTemp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the temperature from the sensor. </p>
+<p class="">Request the temperature value from the sensor and returns a double precision value. </p>
 
 </div>
 </div>

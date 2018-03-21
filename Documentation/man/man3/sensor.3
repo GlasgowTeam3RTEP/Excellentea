@@ -1,8 +1,8 @@
-.TH "sensor" 3 "Sat Mar 17 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.TH "sensor" 3 "Wed Mar 21 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-sensor \- A general class for simple sensors\&.  
+sensor \- A general class for simple HIGH/LOW sensors\&.  
 
 .SH SYNOPSIS
 .br
@@ -36,7 +36,20 @@ Inherited by \fBds18b20\fP\fC [private]\fP\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-A general class for simple sensors\&. 
+A general class for simple HIGH/LOW sensors\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "sensor::sensor (short GPIO)"
+
+.PP
+Class constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIGPIO\fP Raspberry pi pin connected to the sensor\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

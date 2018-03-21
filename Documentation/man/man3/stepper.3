@@ -1,24 +1,32 @@
-.TH "stepper" 3 "Sat Mar 17 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.TH "stepper" 3 "Wed Mar 21 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-stepper
+stepper \- A class to control stepper motors\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <stepper\&.h>\fP
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBinitialize\fP ()"
+.RI "\fBstepper\fP (short A1, short A2, short B1, short B2, int steps)"
+.br
+.ti -1c
+.RI "void \fBinitialise\fP ()"
 .br
 .ti -1c
 .RI "void \fBspin\fP (int speed, int revolutions, bool direction)"
 .br
-.ti -1c
-.RI "\fBstepper\fP (short A1, short A2, short B1, short B2, int steps)"
-.br
 .in -1c
+.SH "Detailed Description"
+.PP 
+A class to control stepper motors\&. 
+
+This class controls general stepper motors (connected via transistor arrays) by defining each step as HIGH or LOW values of the coils and cycling through them after a defined interval\&. 
 
 .SH "Author"
 .PP 

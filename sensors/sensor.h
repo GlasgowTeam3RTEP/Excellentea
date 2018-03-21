@@ -1,16 +1,22 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
-/**A general class for simple sensors.
- 
-*/
+/**A general class for simple HIGH/LOW sensors.
+ */
 
 class sensor
 {
 public:
-    sensor(short GPIO);		//<Class constructor
-    virtual void initialise();	//<Initialisation of the sensor
-    bool readStatus();		//<Read HIGH/LOW status 
+    /** Class constructor 
+    @param GPIO Raspberry pi pin connected to the sensor.
+     */
+    sensor(short GPIO);
+
+    /** Initialisation procedure with wiringPi library */
+    virtual void initialise();
+
+    /**Reads boolean status of the sensor*/
+    bool readStatus();
 protected:
     short pin; //< Raspberry GPIO connected to sensor (wiringPi convention)
 };

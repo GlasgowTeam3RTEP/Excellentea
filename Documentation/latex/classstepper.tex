@@ -1,18 +1,32 @@
 \hypertarget{classstepper}{}\section{stepper Class Reference}
 \label{classstepper}\index{stepper@{stepper}}
+
+
+A class to control stepper motors.  
+
+
+
+
+{\ttfamily \#include $<$stepper.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstepper_a294329374cfa14bc65faef71fcf0c780}\label{classstepper_a294329374cfa14bc65faef71fcf0c780}} 
-void {\bfseries initialize} ()
+\mbox{\Hypertarget{classstepper_aceb54bf5d1838efdab59b04132ad3086}\label{classstepper_aceb54bf5d1838efdab59b04132ad3086}} 
+{\bfseries stepper} (short A1, short A2, short B1, short B2, int steps)
+\item 
+\mbox{\Hypertarget{classstepper_a469233d8e5e0712eb496c39cf4f79cc9}\label{classstepper_a469233d8e5e0712eb496c39cf4f79cc9}} 
+void {\bfseries initialise} ()
 \item 
 \mbox{\Hypertarget{classstepper_aaa1c9583e55db54218231560eeddadb2}\label{classstepper_aaa1c9583e55db54218231560eeddadb2}} 
 void {\bfseries spin} (int speed, int revolutions, bool direction)
-\item 
-\mbox{\Hypertarget{classstepper_aceb54bf5d1838efdab59b04132ad3086}\label{classstepper_aceb54bf5d1838efdab59b04132ad3086}} 
-{\bfseries stepper} (short A1, short A2, short B1, short B2, int steps)
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+A class to control stepper motors. 
+
+This class controls general stepper motors (connected via transistor arrays) by defining each step as H\+I\+GH or L\+OW values of the coils and cycling through them after a defined interval. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

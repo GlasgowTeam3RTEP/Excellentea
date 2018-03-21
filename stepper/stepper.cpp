@@ -10,7 +10,7 @@ stepper::stepper(short A1, short A2, short B1, short B2, int steps)
 	motor_steps = steps;
 }
 
-void stepper::initialize()
+void stepper::initialise()
 {
 	wiringPiSetup();
 
