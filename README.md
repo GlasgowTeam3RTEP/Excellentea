@@ -1,4 +1,4 @@
-<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner.png" alt="Excellentea" width="1000">
+<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner_Github.png" alt="Excellentea" width="1200">
 
 # Description
 
