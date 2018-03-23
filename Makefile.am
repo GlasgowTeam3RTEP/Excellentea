@@ -10,11 +10,11 @@ excellentea_SOURCES = excellentea.cpp \
 	Classes/CppTimer.h \
 	Classes/WebThread.cpp \
 	Classes/WebThread.h \
-	Classes/ds18b20.cpp \
-	Classes/ds18b20.h \
-	Classes/sensor.cpp \
-	Classes/sensor.h \
-	Classes/stepper.cpp \
-	Classes/stepper.h \
-	Classes/tea.cpp \
-	Classes/tea.h
+	Classes/DS18B20.cpp \
+	Classes/DS18B20.h \
+	Classes/Sensor.cpp \
+	Classes/Sensor.h \
+	Classes/Stepper.cpp \
+	Classes/Stepper.h \
+	Classes/Tea.cpp \
+	Classes/Tea.h

@@ -1,18 +1,18 @@
 #include <wiringPi.h>
-#include "sensor.h"
+#include "Sensor.h"
 
-sensor::sensor(short GPIO)
+Sensor::Sensor(short GPIO)
 {
 	pin = GPIO;
 }
 
-void sensor::initialise()
+void Sensor::initialise()
 {
 	wiringPiSetup();
 	pinMode(pin, INPUT);
 }
 
-bool sensor::readStatus()
+bool Sensor::readStatus()
 {
 	return digitalRead(pin);
 }

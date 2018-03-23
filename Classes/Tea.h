@@ -5,7 +5,7 @@
 #ifndef TEA_H
 #define TEA_H
 
-class tea
+class Tea
 {
 public:
     /** Class constructor.
@@ -13,7 +13,7 @@ public:
      @param brew_temp Brewing temperature in °C.
      @param brew_time Brewing time in minutes.
      */
-    tea(double brew_temp, double brew_time);
+    Tea(double brew_temp, double brew_time);
 
     /** Set the brewing temperature.
      @param temp Brewing temperature in °C.

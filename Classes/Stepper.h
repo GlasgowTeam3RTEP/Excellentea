@@ -7,7 +7,7 @@
 #ifndef STEPPER_H
 #define STEPPER_H
 
-class stepper
+class Stepper
 {
 public:
     /** Class constructor.
@@ -17,7 +17,7 @@ public:
      @param B2 Second pin of the second coil
      @param steps Number of the steps of the stepper motor
      */
-    stepper(short A1, short A2, short B1, short B2, int steps);
+    Stepper(short A1, short A2, short B1, short B2, int steps);
 
     /** Initialisation procedure.
      Function required to initialise the stepper motor to wiringPi standards.     

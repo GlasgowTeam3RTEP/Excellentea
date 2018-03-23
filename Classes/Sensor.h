@@ -4,13 +4,13 @@
 /**A general class for simple HIGH/LOW sensors.
  */
 
-class sensor
+class Sensor
 {
 public:
     /** Class constructor 
     @param GPIO Raspberry pi pin connected to the sensor.
      */
-    sensor(short GPIO);
+    Sensor(short GPIO);
 
     /** Initialisation procedure with wiringPi library */
     virtual void initialise();

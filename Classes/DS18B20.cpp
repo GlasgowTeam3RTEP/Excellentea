@@ -5,21 +5,21 @@
 #include <wiringPi.h>
 
 #include "sensor.h"
-#include "ds18b20.h"
+#include "DS18B20.h"
 
-ds18b20::ds18b20(short GPIO, std::string dev_id) : sensor(GPIO)
+DS18B20::DS18B20(short GPIO, std::string dev_id) : sensor(GPIO)
 {
 	pin = GPIO;
 	device_id = dev_id;
 }
 
-void ds18b20::initialise()
+void DS18B20::initialise()
 {
 	system("sudo modprobe w1-gpio"); //Activate one-wire interface 
 	system("sudo modprobe w1-therm"); //^^	
 }
 
-double ds18b20::readTemp()
+double DS18B20::readTemp()
 {
 	//Reads temperature data from sensor DS18B20 and displays it in console
 	//One-wire bus on PIN 7 of the R-Pi

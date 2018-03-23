@@ -6,7 +6,7 @@
 #ifndef DS18B20_H
 #define DS18B20_H
 
-class ds18b20 : sensor
+class DS18B20 : sensor
 {
 public:
 
@@ -15,7 +15,7 @@ public:
  @param GPIO pin number (wiringPi convention)
  @param dev_id device ID on the bus as a string 
      */
-    ds18b20(short GPIO, std::string dev_id);
+    DS18B20(short GPIO, std::string dev_id);
 
     /** Initialisation procedure.
 	Activates the one-wire interface from the Raspberry PI.

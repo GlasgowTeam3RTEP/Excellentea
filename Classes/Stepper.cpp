@@ -1,7 +1,7 @@
-#include "stepper.h"
+#include "Stepper.h"
 #include <wiringPi.h>
 
-stepper::stepper(short A1, short A2, short B1, short B2, int steps)
+Stepper::Stepper(short A1, short A2, short B1, short B2, int steps)
 {
 	coil_A_pin_1 = A1;
 	coil_A_pin_2 = A2;
@@ -10,7 +10,7 @@ stepper::stepper(short A1, short A2, short B1, short B2, int steps)
 	motor_steps = steps;
 }
 
-void stepper::initialise()
+void Stepper::initialise()
 {
 	wiringPiSetup();
 
@@ -20,7 +20,7 @@ void stepper::initialise()
 	pinMode(coil_B_pin_2, OUTPUT);
 }
 
-void stepper::setStep(bool w1, bool w2, bool w3, bool w4)
+void Stepper::setStep(bool w1, bool w2, bool w3, bool w4)
 {
 	digitalWrite(coil_A_pin_1, w1);
 	digitalWrite(coil_A_pin_2, w2);
@@ -28,7 +28,7 @@ void stepper::setStep(bool w1, bool w2, bool w3, bool w4)
 	digitalWrite(coil_B_pin_2, w4);
 }
 
-void stepper::forwardRun(int interval, int revolutions)
+void Stepper::forwardRun(int interval, int revolutions)
 {
 	for (int i = 0; i < motor_steps*revolutions; i++)
 	{
@@ -43,7 +43,7 @@ void stepper::forwardRun(int interval, int revolutions)
 	}
 }
 
-void stepper::backwardRun(int interval, int revolutions)
+void Stepper::backwardRun(int interval, int revolutions)
 {
 	for (int i = 0; i < motor_steps*revolutions; i++)
 	{
@@ -58,7 +58,7 @@ void stepper::backwardRun(int interval, int revolutions)
 	}
 }
 
-void stepper::spin(int speed, int revolutions, bool direction)
+void Stepper::spin(int speed, int revolutions, bool direction)
 {
 	int interval = 1000.0/speed;
 	if (direction)
