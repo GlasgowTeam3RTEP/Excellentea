@@ -1,4 +1,4 @@
-<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Banner_Github.png" alt="Excellentea" width="1200">
+<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Images/Banner_Github.png" alt="Excellentea" width="1200">
 
 # Description
 
@@ -31,21 +31,10 @@ from the terminal.
 1. Load your cup with water
 
 2. Load your tea infuser with the tea of your choice
----
-
-For remote control: 
 
 3. Activate the tea maker from the online user interface
 
 4. Choose the brewing mode of your tea
----
-
-For on-machine control: 
-
-3. Activate using inbuilt interface
-
-4. Navigate with control buttons and select your preferred program
----
 
 5. Wait...tea is ready:)
 
@@ -82,7 +71,7 @@ The raspberry PI must be connected to the internet for remote access.
 
 ## Flow diagram
 
-![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/images/Program_flow.png "Flow diagram of the tea maker")
+![Flow Diagram](https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Images/Program_flow.png "Flow diagram of the tea maker")
 
 # Authors
 
