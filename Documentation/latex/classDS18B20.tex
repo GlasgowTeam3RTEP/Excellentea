@@ -1,0 +1,96 @@
+\hypertarget{classDS18B20}{}\section{D\+S18\+B20 Class Reference}
+\label{classDS18B20}\index{D\+S18\+B20@{D\+S18\+B20}}
+
+
+Class for the digital temperature sensor \mbox{\hyperlink{classDS18B20}{D\+S18\+B20}}.  
+
+
+
+
+{\ttfamily \#include $<$D\+S18\+B20.\+h$>$}
+
+
+
+Inheritance diagram for D\+S18\+B20\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classDS18B20__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for D\+S18\+B20\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classDS18B20__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDS18B20_af99ab621aa1603fe2dbc7ec27d387e02}{D\+S18\+B20}} (short G\+P\+IO, std\+::string dev\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDS18B20_ab244f4c5331b543d5e7d7bda33c54e40}{initialise}} ()
+\begin{DoxyCompactList}\small\item\em Initialisation procedure. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classDS18B20_a1abd2723b34fdeb9d538476cfac4f042}{read\+Temp}} ()
+\begin{DoxyCompactList}\small\item\em Read the temperature from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the digital temperature sensor \mbox{\hyperlink{classDS18B20}{D\+S18\+B20}}. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDS18B20_af99ab621aa1603fe2dbc7ec27d387e02}\label{classDS18B20_af99ab621aa1603fe2dbc7ec27d387e02}} 
+\index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection{\texorpdfstring{D\+S18\+B20()}{DS18B20()}}
+{\footnotesize\ttfamily D\+S18\+B20\+::\+D\+S18\+B20 (\begin{DoxyParamCaption}\item[{short}]{G\+P\+IO,  }\item[{std\+::string}]{dev\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+Build a temperature sensor object with the pin number and the unique device ID. 
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+IO} & pin number (wiring\+Pi convention) \\
+\hline
+{\em dev\+\_\+id} & device ID on the bus as a string \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDS18B20_ab244f4c5331b543d5e7d7bda33c54e40}\label{classDS18B20_ab244f4c5331b543d5e7d7bda33c54e40}} 
+\index{D\+S18\+B20@{D\+S18\+B20}!initialise@{initialise}}
+\index{initialise@{initialise}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection{\texorpdfstring{initialise()}{initialise()}}
+{\footnotesize\ttfamily void D\+S18\+B20\+::initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialisation procedure. 
+
+Activates the one-\/wire interface from the Raspberry PI. 
+
+Reimplemented from \mbox{\hyperlink{classSensor_af6f7d509e560240dfc5b1def0d87c26f}{Sensor}}.
+
+\mbox{\Hypertarget{classDS18B20_a1abd2723b34fdeb9d538476cfac4f042}\label{classDS18B20_a1abd2723b34fdeb9d538476cfac4f042}} 
+\index{D\+S18\+B20@{D\+S18\+B20}!read\+Temp@{read\+Temp}}
+\index{read\+Temp@{read\+Temp}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection{\texorpdfstring{read\+Temp()}{readTemp()}}
+{\footnotesize\ttfamily double D\+S18\+B20\+::read\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the temperature from the sensor. 
+
+Request the temperature value from the sensor and returns a double precision value. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/D\+S18\+B20.\+h\item 
+Classes/D\+S18\+B20.\+cpp\end{DoxyCompactItemize}

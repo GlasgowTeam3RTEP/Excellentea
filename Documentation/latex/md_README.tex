@@ -29,30 +29,9 @@ excellentea
 
 \begin{DoxyEnumerate}
 \item Load your cup with water
-\end{DoxyEnumerate}
-
-\subsection*{2. Load your tea infuser with the tea of your choice }
-
-For remote control\+:
-
-
-\begin{DoxyEnumerate}
+\item Load your tea infuser with the tea of your choice
 \item Activate the tea maker from the online user interface
-\end{DoxyEnumerate}
-
-\subsection*{4. Choose the brewing mode of your tea }
-
-For on-\/machine control\+:
-
-
-\begin{DoxyEnumerate}
-\item Activate using inbuilt interface
-\end{DoxyEnumerate}
-
-\subsection*{4. Navigate with control buttons and select your preferred program }
-
-
-\begin{DoxyEnumerate}
+\item Choose the brewing mode of your tea
 \item Wait...tea is ready\+:)
 \end{DoxyEnumerate}
 
@@ -63,8 +42,8 @@ For on-\/machine control\+:
 
 \begin{DoxyItemize}
 \item 1 Raspberry PI microcontroller board (tested on version 3 Model B)
-\item 1 Stepper motor (M\+I\+K\+R\+O\+E-\/1530)
-\item 1 Digital temperature sensor (\mbox{\hyperlink{classds18b20}{ds18b20}})
+\item 1 \mbox{\hyperlink{classStepper}{Stepper}} motor (M\+I\+K\+R\+O\+E-\/1530)
+\item 1 Digital temperature sensor (ds18b20)
 \item 12V DC power supply
 \item 1 heating element (12V) (B004\+O8\+B\+G\+XE)
 \item 1 tea infuser
@@ -82,7 +61,7 @@ The project also requires standard passive components (e.\+g. resistors), protot
 
 \subsection*{Protocol}
 
-The digital temperature sensor D\+S18\+B20 communicates with the board through a 1-\/wire protocol on pin 7 (B\+C\+M4). The reed float sensor only outputs two-\/states so a communication protocol is not required.
+The digital temperature sensor \mbox{\hyperlink{classDS18B20}{D\+S18\+B20}} communicates with the board through a 1-\/wire protocol on pin 7 (B\+C\+M4). The reed float sensor only outputs two-\/states so a communication protocol is not required.
 
 \subsection*{Prerequisites}
 

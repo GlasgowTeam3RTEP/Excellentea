@@ -1,0 +1,65 @@
+.TH "DS18B20" 3 "Fri Mar 23 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DS18B20 \- Class for the digital temperature sensor \fBDS18B20\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DS18B20\&.h>\fP
+.PP
+Inherits \fBSensor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDS18B20\fP (short GPIO, std::string dev_id)"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBinitialise\fP ()"
+.br
+.RI "Initialisation procedure\&. "
+.ti -1c
+.RI "double \fBreadTemp\fP ()"
+.br
+.RI "Read the temperature from the sensor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class for the digital temperature sensor \fBDS18B20\fP\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DS18B20::DS18B20 (short GPIO, std::string dev_id)"
+
+.PP
+Class constructor\&. Build a temperature sensor object with the pin number and the unique device ID\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIGPIO\fP pin number (wiringPi convention) 
+.br
+\fIdev_id\fP device ID on the bus as a string 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DS18B20::initialise ()\fC [virtual]\fP"
+
+.PP
+Initialisation procedure\&. Activates the one-wire interface from the Raspberry PI\&. 
+.PP
+Reimplemented from \fBSensor\fP\&.
+.SS "double DS18B20::readTemp ()"
+
+.PP
+Read the temperature from the sensor\&. Request the temperature value from the sensor and returns a double precision value\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Excellentea from the source code\&.

@@ -1,4 +1,4 @@
-.TH "md_README" 3 "Wed Mar 21 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.TH "md_README" 3 "Fri Mar 23 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -37,26 +37,12 @@ excellentea
 .PP
 .IP "1." 4
 Load your cup with water
-.PP
-.PP
-.SS "2\&. Load your tea infuser with the tea of your choice "
-.PP
-For remote control:
-.PP
+.IP "2." 4
+Load your tea infuser with the tea of your choice
 .IP "3." 4
 Activate the tea maker from the online user interface
-.PP
-.PP
-.SS "4\&. Choose the brewing mode of your tea "
-.PP
-For on-machine control:
-.PP
-.IP "3." 4
-Activate using inbuilt interface
-.PP
-.PP
-.SS "4\&. Navigate with control buttons and select your preferred program "
-.PP
+.IP "4." 4
+Choose the brewing mode of your tea
 .IP "5." 4
 Wait\&.\&.\&.tea is ready:)
 .PP
@@ -69,9 +55,9 @@ Wait\&.\&.\&.tea is ready:)
 .IP "\(bu" 2
 1 Raspberry PI microcontroller board (tested on version 3 Model B)
 .IP "\(bu" 2
-1 Stepper motor (MIKROE-1530)
+1 \fBStepper\fP motor (MIKROE-1530)
 .IP "\(bu" 2
-1 Digital temperature sensor (\fBds18b20\fP)
+1 Digital temperature sensor (ds18b20)
 .IP "\(bu" 2
 12V DC power supply
 .IP "\(bu" 2
@@ -98,7 +84,7 @@ The project also requires standard passive components (e\&.g\&. resistors), prot
 .PP
 .SS "Protocol"
 .PP
-The digital temperature sensor DS18B20 communicates with the board through a 1-wire protocol on pin 7 (BCM4)\&. The reed float sensor only outputs two-states so a communication protocol is not required\&.
+The digital temperature sensor \fBDS18B20\fP communicates with the board through a 1-wire protocol on pin 7 (BCM4)\&. The reed float sensor only outputs two-states so a communication protocol is not required\&.
 .PP
 .SS "Prerequisites"
 .PP

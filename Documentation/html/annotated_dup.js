@@ -1,7 +1,13 @@
 var annotated_dup =
 [
-    [ "ds18b20", "classds18b20.html", "classds18b20" ],
-    [ "sensor", "classsensor.html", "classsensor" ],
-    [ "stepper", "classstepper.html", "classstepper" ],
-    [ "tea", "classtea.html", "classtea" ]
+    [ "Actuator", "classActuator.html", "classActuator" ],
+    [ "BrewTimer", "classBrewTimer.html", null ],
+    [ "ControllerThread", "classControllerThread.html", "classControllerThread" ],
+    [ "CppThread", "classCppThread.html", "classCppThread" ],
+    [ "CppTimer", "classCppTimer.html", "classCppTimer" ],
+    [ "DS18B20", "classDS18B20.html", "classDS18B20" ],
+    [ "Sensor", "classSensor.html", "classSensor" ],
+    [ "Stepper", "classStepper.html", "classStepper" ],
+    [ "Tea", "classTea.html", "classTea" ],
+    [ "WebThread", "classWebThread.html", "classWebThread" ]
 ];

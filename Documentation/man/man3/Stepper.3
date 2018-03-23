@@ -1,0 +1,76 @@
+.TH "Stepper" 3 "Fri Mar 23 2018" "Version 1.0" "Excellentea" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Stepper \- A class to control stepper motors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Stepper\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStepper\fP (short A1, short A2, short B1, short B2, int steps)"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBinitialise\fP ()"
+.br
+.RI "Initialisation procedure\&. "
+.ti -1c
+.RI "void \fBspin\fP (int speed, int revolutions, bool direction)"
+.br
+.RI "Spin the stepper motor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A class to control stepper motors\&. 
+
+This class controls general stepper motors (connected via transistor arrays) by defining each step as HIGH or LOW values of the coils and cycling through them after a defined interval\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Stepper::Stepper (short A1, short A2, short B1, short B2, int steps)"
+
+.PP
+Class constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIA1\fP First pin of the first coil 
+.br
+\fIA2\fP Second pin of the first coil 
+.br
+\fIB1\fP First pin of the second coil 
+.br
+\fIB2\fP Second pin of the second coil 
+.br
+\fIsteps\fP Number of the steps of the stepper motor 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Stepper::initialise ()"
+
+.PP
+Initialisation procedure\&. Function required to initialise the stepper motor to wiringPi standards\&. 
+.SS "void Stepper::spin (int speed, int revolutions, bool direction)"
+
+.PP
+Spin the stepper motor\&. Spin the stepper motor in a certain direction and at a certain speed as defined by the input parameters\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIspeed\fP spinning speed 
+.br
+\fIrevolutions\fP number of revolutions  clockwise or anti-clockwise direction specified as a boolean value\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Excellentea from the source code\&.

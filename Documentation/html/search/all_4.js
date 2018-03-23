@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['sensor',['sensor',['../classsensor.html',1,'sensor'],['../classsensor.html#a3341a98b9c6b4f0e0234f205941f4342',1,'sensor::sensor()']]],
-  ['setbrewtemperature',['setBrewTemperature',['../classtea.html#a6853c9899596abea3121aae76b12e5f6',1,'tea']]],
-  ['setbrewtime',['setBrewTime',['../classtea.html#aa541720b90b31274c3bba3e77d765c81',1,'tea']]],
-  ['stepper',['stepper',['../classstepper.html',1,'']]]
+  ['getbrewtemperature',['getBrewTemperature',['../classTea.html#ac4a33558dad77fc196da4eb8ca5ea80b',1,'Tea']]],
+  ['getbrewtime',['getBrewTime',['../classTea.html#a9b95d6c5fc91c1bb26a125a8fb8d0e32',1,'Tea']]],
+  ['guidelines',['Guidelines',['../md_CONTRIBUTING.html',1,'']]]
 ];

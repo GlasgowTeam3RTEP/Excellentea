@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ds18b20',['ds18b20',['../classds18b20.html',1,'ds18b20'],['../classds18b20.html#a2feec12ddec6572d29db8b0fe7181bab',1,'ds18b20::ds18b20()']]]
+  ['actuator',['Actuator',['../classActuator.html',1,'Actuator'],['../classActuator.html#a8323c15d7ca85370d2760cbcaba7cb07',1,'Actuator::Actuator()']]]
 ];

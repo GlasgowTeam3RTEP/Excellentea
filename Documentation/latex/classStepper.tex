@@ -1,0 +1,87 @@
+\hypertarget{classStepper}{}\section{Stepper Class Reference}
+\label{classStepper}\index{Stepper@{Stepper}}
+
+
+A class to control stepper motors.  
+
+
+
+
+{\ttfamily \#include $<$Stepper.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStepper_a397cb4fa7c633917a0433f9455b54061}{Stepper}} (short A1, short A2, short B1, short B2, int steps)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStepper_a04a7aba2471330da8f514860e6047f29}{initialise}} ()
+\begin{DoxyCompactList}\small\item\em Initialisation procedure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStepper_a2e8ab51c08dd6773e62721460565af08}{spin}} (int speed, int revolutions, bool direction)
+\begin{DoxyCompactList}\small\item\em Spin the stepper motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to control stepper motors. 
+
+This class controls general stepper motors (connected via transistor arrays) by defining each step as H\+I\+GH or L\+OW values of the coils and cycling through them after a defined interval. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStepper_a397cb4fa7c633917a0433f9455b54061}\label{classStepper_a397cb4fa7c633917a0433f9455b54061}} 
+\index{Stepper@{Stepper}!Stepper@{Stepper}}
+\index{Stepper@{Stepper}!Stepper@{Stepper}}
+\subsubsection{\texorpdfstring{Stepper()}{Stepper()}}
+{\footnotesize\ttfamily Stepper\+::\+Stepper (\begin{DoxyParamCaption}\item[{short}]{A1,  }\item[{short}]{A2,  }\item[{short}]{B1,  }\item[{short}]{B2,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A1} & First pin of the first coil \\
+\hline
+{\em A2} & Second pin of the first coil \\
+\hline
+{\em B1} & First pin of the second coil \\
+\hline
+{\em B2} & Second pin of the second coil \\
+\hline
+{\em steps} & Number of the steps of the stepper motor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStepper_a04a7aba2471330da8f514860e6047f29}\label{classStepper_a04a7aba2471330da8f514860e6047f29}} 
+\index{Stepper@{Stepper}!initialise@{initialise}}
+\index{initialise@{initialise}!Stepper@{Stepper}}
+\subsubsection{\texorpdfstring{initialise()}{initialise()}}
+{\footnotesize\ttfamily void Stepper\+::initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialisation procedure. 
+
+Function required to initialise the stepper motor to wiring\+Pi standards. \mbox{\Hypertarget{classStepper_a2e8ab51c08dd6773e62721460565af08}\label{classStepper_a2e8ab51c08dd6773e62721460565af08}} 
+\index{Stepper@{Stepper}!spin@{spin}}
+\index{spin@{spin}!Stepper@{Stepper}}
+\subsubsection{\texorpdfstring{spin()}{spin()}}
+{\footnotesize\ttfamily void Stepper\+::spin (\begin{DoxyParamCaption}\item[{int}]{speed,  }\item[{int}]{revolutions,  }\item[{bool}]{direction }\end{DoxyParamCaption})}
+
+
+
+Spin the stepper motor. 
+
+Spin the stepper motor in a certain direction and at a certain speed as defined by the input parameters. 
+\begin{DoxyParams}{Parameters}
+{\em speed} & spinning speed \\
+\hline
+{\em revolutions} & number of revolutions  clockwise or anti-\/clockwise direction specified as a boolean value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/Stepper.\+h\item 
+Classes/Stepper.\+cpp\end{DoxyCompactItemize}

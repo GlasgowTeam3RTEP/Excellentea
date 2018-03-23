@@ -1,13 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-//#include <string>
 #include <wiringPi.h>
 
-#include "sensor.h"
+#include "Sensor.h"
 #include "DS18B20.h"
 
-DS18B20::DS18B20(short GPIO, std::string dev_id) : sensor(GPIO)
+DS18B20::DS18B20(short GPIO, std::string dev_id) : Sensor(GPIO)
 {
 	pin = GPIO;
 	device_id = dev_id;
