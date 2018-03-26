@@ -1,0 +1,107 @@
+<! doctype html>
+
+<html>
+
+<head>
+    <script src="jquery-3.3.1.js"></script>
+<style>
+
+	body {
+		 background-color: black;
+	}
+	
+
+	
+	input[type=button] {
+    background-color: #ac0033;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+	}
+
+	input[type=button]:hover {
+    background: grey;
+	}
+</style>
+
+
+</head>
+<body>
+
+<script type = "text/javascript">
+
+	function on_callPHP()
+	{
+        $.ajax({
+               type: "POST",
+               url:'http://localhost/php_func.php',
+               data:{action:'call_this'},
+               success:function(html){
+               alert(html);
+               }
+               
+               });
+	}
+	
+	function black_tea()
+	{
+
+		$.ajax({
+			type: "POST",
+               url:'http://localhost/blacktea.php',
+               data:{action:'call_this'},
+               success:function(html){
+                    alert(html)
+               }
+				
+		});
+        
+	}
+	function green_tea()
+	{
+        $.ajax({
+               type: "POST",
+               url:'http://localhost/greentea.php',
+               data:{action:'call_this'},
+               success:function(html){
+               alert(html);
+               }
+               
+               });
+	}
+	
+</script>
+
+<form action= "" method= "POST">
+<input type= "button" value= "Activate" onclick = "on_callPHP()" style= "position: absolute; top: 450px; left: 350px"/>
+<input type= "button" value= "Black Tea" onclick = "black_tea()" style= "position: absolute; top: 450px; left: 500px"/>
+<input type= "button" value= "Green Tea" onclick = "green_tea()" style= "position: absolute; top: 450px; left: 650px"/>
+</form>
+
+<img src="Banner_Github.png" alt="Banner" align="middle">
+
+	<?php
+		function php_func()
+		{
+
+		}
+		
+		
+		function greentea()
+		{
+			$greentea = fopen("green_tea.txt", "w") or die("Unable to open file!");
+			$txt= "temperature:76.67, time: 120";
+			fwrite($greentea,$txt);
+			echo "It works too!";
+			fclose($greentea);
+			
+		}
+		
+	?>
+	
+</body>
+
+
