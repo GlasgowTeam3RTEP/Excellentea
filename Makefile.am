@@ -10,13 +10,21 @@ excellentea_SOURCES = excellentea.cpp \
 			Classes/ControllerThread.h \
 			Classes/CppThread.h \
 			Classes/CppTimer.h \
-			Classes/WebThread.cpp \
-			Classes/WebThread.h \
 			Classes/DS18B20.cpp \
 			Classes/DS18B20.h \
+			Classes/I2CIO.cpp \
+			Classes/I2CIO.h \
+			Classes/LCD.cpp \
+			Classes/LCD.h \
+			Classes/LiquidCrystal.cpp \
+			Classes/LiquidCrystal.h \
+			Classes/LiquidCrystal_I2C.cpp \
+			Classes/LiquidCrystal_I2C.h \
 			Classes/Sensor.cpp \
 			Classes/Sensor.h \
 			Classes/Stepper.cpp \
 			Classes/Stepper.h \
 			Classes/Tea.cpp \
-			Classes/Tea.h
+			Classes/Tea.h \
+			Classes/WebThread.cpp \
+			Classes/WebThread.h

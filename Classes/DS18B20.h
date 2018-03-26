@@ -1,6 +1,6 @@
 /**Class for the digital temperature sensor DS18B20. */
 
-#include "sensor.h"
+#include "Sensor.h"
 #include <string>
 
 #ifndef DS18B20_H

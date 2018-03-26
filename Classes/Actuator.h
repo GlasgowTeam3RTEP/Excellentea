@@ -15,14 +15,14 @@ public:
     Actuator(short GPIO);
 
     /** Initialisation procedure with the wiringPi library */
-    virtual void initialise();
+    void initialise();
 
     /**Sets the value of the pin to HIGH*/
     void switchOn();
-    
+
     /**Sets the value of the pin to LOW*/
     void switchOff();
-    
+
 private:
     short pin; //< Raspberry GPIO connected to the actuator(wiringPi convention)
 };

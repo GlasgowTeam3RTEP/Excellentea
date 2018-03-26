@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <wiringPi.h>
+#include <cstdlib>
 
 #include "Sensor.h"
 #include "DS18B20.h"
@@ -14,8 +15,8 @@ DS18B20::DS18B20(short GPIO, std::string dev_id) : Sensor(GPIO)
 
 void DS18B20::initialise()
 {
-	system("sudo modprobe w1-gpio"); //Activate one-wire interface 
-	system("sudo modprobe w1-therm"); //^^	
+	std::system("sudo modprobe w1-gpio"); //Activate one-wire interface 
+	std::system("sudo modprobe w1-therm"); //^^	
 }
 
 double DS18B20::readTemp()
