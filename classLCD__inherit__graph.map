@@ -1,0 +1,4 @@
+<map id="LCD" name="LCD">
+<area shape="rect" id="node2" href="$classLiquidCrystal.html" title="A basic implementation of the LiquidCrystal library of the Arduino SDK. " alt="" coords="5,80,104,107"/>
+<area shape="rect" id="node3" href="$classLiquidCrystal__I2C.html" title="A basic liquid crystal library that comes as standard in the Arduino SDK but using an I2C IO extensio..." alt="" coords="129,80,255,107"/>
+</map>

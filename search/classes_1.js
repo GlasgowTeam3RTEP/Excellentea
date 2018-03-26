@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['brewtimer',['BrewTimer',['../classBrewTimer.html',1,'']]]
+  ['cppthread',['CppThread',['../classCppThread.html',1,'']]]
 ];

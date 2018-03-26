@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classActuator.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classActuator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Actuator Class Reference</div>  </div>
@@ -107,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8323c15d7ca85370d2760cbcaba7cb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor.  <a href="#a8323c15d7ca85370d2760cbcaba7cb07">More...</a><br /></td></tr>
 <tr class="separator:a8323c15d7ca85370d2760cbcaba7cb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5537adf881ed487909d9c08c5d6aa11c"><td class="memItemLeft" align="right" valign="top"><a id="a5537adf881ed487909d9c08c5d6aa11c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActuator.html#a5537adf881ed487909d9c08c5d6aa11c">initialise</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActuator.html#a5537adf881ed487909d9c08c5d6aa11c">initialise</a> ()</td></tr>
 <tr class="memdesc:a5537adf881ed487909d9c08c5d6aa11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation procedure with the wiringPi library. <br /></td></tr>
 <tr class="separator:a5537adf881ed487909d9c08c5d6aa11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad601cfe00148629da1c4dbbee51bbc8c"><td class="memItemLeft" align="right" valign="top"><a id="ad601cfe00148629da1c4dbbee51bbc8c"></a>
@@ -118,10 +119,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classActuator.html#a4ba3e5924188bb4f9f81a5adebb70be5">switchOff</a> ()</td></tr>
 <tr class="memdesc:a4ba3e5924188bb4f9f81a5adebb70be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the pin to LOW. <br /></td></tr>
 <tr class="separator:a4ba3e5924188bb4f9f81a5adebb70be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac079ab11bb0c14af3b1d5fa8109ec5b4"><td class="memItemLeft" align="right" valign="top"><a id="ac079ab11bb0c14af3b1d5fa8109ec5b4"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>pin</b></td></tr>
+<tr class="separator:ac079ab11bb0c14af3b1d5fa8109ec5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">A general class for external loads. </p>
-<p class="">This class merely allows the HIGH/LOW switching of pins ideal for external loads connected through logic-level MOSFETs/transistor. </p>
+<p class="">This class merely allows the HIGH/LOW switching of pins ideal for external loads connected through logic-level MOSFETs/transistor.</p>
+<dl class="section version"><dt>Version</dt><dd>Excellentea 1.0</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Simone Marcigaglia </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8323c15d7ca85370d2760cbcaba7cb07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8323c15d7ca85370d2760cbcaba7cb07">&#9670;&nbsp;</a></span>Actuator()</h2>

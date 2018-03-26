@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readstatus',['readStatus',['../classSensor.html#a5d235b5abfb0446c8a5aa378630945fa',1,'Sensor']]],
-  ['readtemp',['readTemp',['../classDS18B20.html#a1abd2723b34fdeb9d538476cfac4f042',1,'DS18B20']]]
+  ['getbrewtemperature',['getBrewTemperature',['../classTea.html#ac4a33558dad77fc196da4eb8ca5ea80b',1,'Tea']]],
+  ['getbrewtime',['getBrewTime',['../classTea.html#a9b95d6c5fc91c1bb26a125a8fb8d0e32',1,'Tea']]]
 ];

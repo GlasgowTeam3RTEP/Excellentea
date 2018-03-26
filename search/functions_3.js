@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['getbrewtemperature',['getBrewTemperature',['../classTea.html#ac4a33558dad77fc196da4eb8ca5ea80b',1,'Tea']]],
-  ['getbrewtime',['getBrewTime',['../classTea.html#a9b95d6c5fc91c1bb26a125a8fb8d0e32',1,'Tea']]]
+  ['digitalread',['digitalRead',['../classI2CIO.html#ac26221011a8b49bcea9ef62712ea88a7',1,'I2CIO']]],
+  ['digitalwrite',['digitalWrite',['../classI2CIO.html#a473206162522b847546777d16a7c6dcd',1,'I2CIO']]],
+  ['display',['display',['../classLCD.html#a5b07cf05e8e5e7c53654f5ca0cf58b89',1,'LCD']]],
+  ['ds18b20',['DS18B20',['../classDS18B20.html#af99ab621aa1603fe2dbc7ec27d387e02',1,'DS18B20']]]
 ];

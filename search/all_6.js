@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['readme',['README',['../md_README.html',1,'']]],
-  ['readstatus',['readStatus',['../classSensor.html#a5d235b5abfb0446c8a5aa378630945fa',1,'Sensor']]],
-  ['readtemp',['readTemp',['../classDS18B20.html#a1abd2723b34fdeb9d538476cfac4f042',1,'DS18B20']]]
+  ['home',['home',['../classLCD.html#aee45ad37f09312f5d9982257e2d37e68',1,'LCD']]]
 ];

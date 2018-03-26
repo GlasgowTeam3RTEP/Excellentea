@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classStepper.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classStepper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Stepper Class Reference</div>  </div>
@@ -112,10 +114,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e8ab51c08dd6773e62721460565af08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepper.html#a2e8ab51c08dd6773e62721460565af08">spin</a> (int speed, int revolutions, bool direction)</td></tr>
 <tr class="memdesc:a2e8ab51c08dd6773e62721460565af08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spin the stepper motor.  <a href="#a2e8ab51c08dd6773e62721460565af08">More...</a><br /></td></tr>
 <tr class="separator:a2e8ab51c08dd6773e62721460565af08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a30558244292a6edb4478d59c17c419db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepper.html#a30558244292a6edb4478d59c17c419db">setStep</a> (bool a1, bool a2, bool b1, bool b2)</td></tr>
+<tr class="memdesc:a30558244292a6edb4478d59c17c419db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a specific step of the stepper motor.  <a href="#a30558244292a6edb4478d59c17c419db">More...</a><br /></td></tr>
+<tr class="separator:a30558244292a6edb4478d59c17c419db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e1a34aa47c4648a8f37705b1b10ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepper.html#a71e1a34aa47c4648a8f37705b1b10ec0">forwardRun</a> (int interval, int steps)</td></tr>
+<tr class="memdesc:a71e1a34aa47c4648a8f37705b1b10ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spin the stepper in the forward direction.  <a href="#a71e1a34aa47c4648a8f37705b1b10ec0">More...</a><br /></td></tr>
+<tr class="separator:a71e1a34aa47c4648a8f37705b1b10ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59d5313f2001d52790451b2713a4ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepper.html#ae59d5313f2001d52790451b2713a4ee9">backwardRun</a> (int interval, int steps)</td></tr>
+<tr class="memdesc:ae59d5313f2001d52790451b2713a4ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spin the stepper in the backward direction.  <a href="#ae59d5313f2001d52790451b2713a4ee9">More...</a><br /></td></tr>
+<tr class="separator:ae59d5313f2001d52790451b2713a4ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a97a489defc431ff4e80451a6e67fa9cd"><td class="memItemLeft" align="right" valign="top"><a id="a97a489defc431ff4e80451a6e67fa9cd"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>coil_A_pin_1</b></td></tr>
+<tr class="separator:a97a489defc431ff4e80451a6e67fa9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638898d7a80bf5ad4f601422b72d0acf"><td class="memItemLeft" align="right" valign="top"><a id="a638898d7a80bf5ad4f601422b72d0acf"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>coil_A_pin_2</b></td></tr>
+<tr class="separator:a638898d7a80bf5ad4f601422b72d0acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50007d2d005ce1d0800edf32af70ed55"><td class="memItemLeft" align="right" valign="top"><a id="a50007d2d005ce1d0800edf32af70ed55"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>coil_B_pin_1</b></td></tr>
+<tr class="separator:a50007d2d005ce1d0800edf32af70ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1d29b00041e38796054267c75ee304"><td class="memItemLeft" align="right" valign="top"><a id="a1b1d29b00041e38796054267c75ee304"></a>
+short&#160;</td><td class="memItemRight" valign="bottom"><b>coil_B_pin_2</b></td></tr>
+<tr class="separator:a1b1d29b00041e38796054267c75ee304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b01146f50a734f2cd80e0b5e5727505"><td class="memItemLeft" align="right" valign="top"><a id="a3b01146f50a734f2cd80e0b5e5727505"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>motor_steps</b></td></tr>
+<tr class="separator:a3b01146f50a734f2cd80e0b5e5727505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">A class to control stepper motors. </p>
-<p class="">This class controls general stepper motors (connected via transistor arrays) by defining each step as HIGH or LOW values of the coils and cycling through them after a defined interval. </p>
+<p class="">This class controls general stepper motors (connected via transistor arrays) by defining each step as HIGH or LOW values of the coils and cycling through them after a defined interval.</p>
+<dl class="section version"><dt>Version</dt><dd>Excellentea 1.0</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Simone Marcigaglia </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a397cb4fa7c633917a0433f9455b54061"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a397cb4fa7c633917a0433f9455b54061">&#9670;&nbsp;</a></span>Stepper()</h2>
@@ -176,6 +210,96 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae59d5313f2001d52790451b2713a4ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59d5313f2001d52790451b2713a4ee9">&#9670;&nbsp;</a></span>backwardRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stepper::backwardRun </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>steps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spin the stepper in the backward direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>Interval between subsequent steps </td></tr>
+    <tr><td class="paramname">steps</td><td>Number of steps </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a71e1a34aa47c4648a8f37705b1b10ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e1a34aa47c4648a8f37705b1b10ec0">&#9670;&nbsp;</a></span>forwardRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stepper::forwardRun </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>steps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spin the stepper in the forward direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>Interval between subsequent steps </td></tr>
+    <tr><td class="paramname">steps</td><td>Number of steps </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a04a7aba2471330da8f514860e6047f29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04a7aba2471330da8f514860e6047f29">&#9670;&nbsp;</a></span>initialise()</h2>
 
@@ -193,6 +317,57 @@ Public Member Functions</h2></td></tr>
 
 <p>Initialisation procedure. </p>
 <p class="">Function required to initialise the stepper motor to wiringPi standards. </p>
+
+</div>
+</div>
+<a id="a30558244292a6edb4478d59c17c419db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30558244292a6edb4478d59c17c419db">&#9670;&nbsp;</a></span>setStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stepper::setStep </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define a specific step of the stepper motor. </p>
+<p class="">Input parameters are high/low values of each terminal. </p>
 
 </div>
 </div>

@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['sensor',['Sensor',['../classSensor.html',1,'Sensor'],['../classSensor.html#a3909b52adbe404d4ab637163001e8c86',1,'Sensor::Sensor()']]],
-  ['setbrewtemperature',['setBrewTemperature',['../classTea.html#acb5bec6356db757e2deb5598b6a7ad37',1,'Tea']]],
-  ['setbrewtime',['setBrewTime',['../classTea.html#a3f9bb73bd2d9978b63f1dd1a2463f025',1,'Tea']]],
-  ['spin',['spin',['../classStepper.html#a2e8ab51c08dd6773e62721460565af08',1,'Stepper']]],
-  ['stepper',['Stepper',['../classStepper.html',1,'Stepper'],['../classStepper.html#a397cb4fa7c633917a0433f9455b54061',1,'Stepper::Stepper()']]],
-  ['switchoff',['switchOff',['../classActuator.html#a4ba3e5924188bb4f9f81a5adebb70be5',1,'Actuator']]],
-  ['switchon',['switchOn',['../classActuator.html#ad601cfe00148629da1c4dbbee51bbc8c',1,'Actuator']]]
+  ['i2cio',['I2CIO',['../classI2CIO.html',1,'I2CIO'],['../classI2CIO.html#a32eb7832075ad6011d67874405a0d0a6',1,'I2CIO::I2CIO()']]],
+  ['init',['init',['../classLiquidCrystal.html#ae45eec827b26174f73e9cf3ddda635af',1,'LiquidCrystal::init()'],['../classLiquidCrystal__I2C.html#a459c4fa106fb7bac5940e3c6aea736af',1,'LiquidCrystal_I2C::init()']]],
+  ['initialise',['initialise',['../classActuator.html#a5537adf881ed487909d9c08c5d6aa11c',1,'Actuator::initialise()'],['../classDS18B20.html#ab244f4c5331b543d5e7d7bda33c54e40',1,'DS18B20::initialise()'],['../classSensor.html#af6f7d509e560240dfc5b1def0d87c26f',1,'Sensor::initialise()'],['../classStepper.html#a04a7aba2471330da8f514860e6047f29',1,'Stepper::initialise()']]]
 ];

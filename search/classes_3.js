@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ds18b20',['DS18B20',['../classDS18B20.html',1,'']]]
+  ['i2cio',['I2CIO',['../classI2CIO.html',1,'']]]
 ];
