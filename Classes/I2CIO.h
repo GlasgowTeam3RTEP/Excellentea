@@ -1,29 +1,3 @@
-// ---------------------------------------------------------------------------
-// Created by Francisco Malpartida on 20/08/11.
-// Copyright 2011 - Under creative commons license 3.0:
-//        Attribution-ShareAlike CC BY-SA
-//
-// This software is furnished "as is", without technical support, and with no
-// warranty, express or implied, as to its usefulness for any purpose.
-//
-// Thread Safe: No
-// Extendable: Yes
-//
-// @file I2CIO.h
-// This file implements a basic IO library using the PCF8574 I2C IO Expander
-// chip.
-//
-// @brief
-// Implement a basic IO library to drive the PCF8574* I2C IO Expander ASIC.
-// The library implements basic IO general methods to configure IO pin direction
-// read and write uint8_t operations and basic pin level routines to set or read
-// a particular IO port.
-//
-// @version API 1.0.0
-//
-// @author F. Malpartida - fmalpartida@gmail.com
-// ---------------------------------------------------------------------------
-
 #ifndef _I2CIO_H_
 #define _I2CIO_H_
 
@@ -37,24 +11,38 @@
 #define HIGH 1
 #define LOW 0
 
-/*!
- @class
- @abstract    I2CIO
- @discussion  Library driver to control PCF8574 based ASICs. Implementing
- library calls to set/get port through I2C bus.
- */
 
+/** A basic IO library using the PCF8574 I2C IO Expander chip.
+ *  Created by Francisco Malpartida on 20/08/11.
+ *  Copyright 2011 - Under creative commons license 3.0:
+ *	Attribution-ShareAlike CC BY-SA
+ *
+ *  This software is furnished "as is", without technical support, and with no
+ *  warranty, express or implied, as to its usefulness for any purpose.
+ *
+ *  Thread Safe: No
+ *  Extendable: Yes
+ *
+ *  Implement a basic IO library to drive the PCF8574* I2C IO Expander ASIC.
+ *  The library implements basic IO general methods to configure IO pin direction
+ *  read and write uint8_t operations and basic pin level routines to set or read
+ *  a particular IO port.
+ *
+ *  @version API 1.0.0
+ *  
+ *  @author F. Malpartida - fmalpartida@gmail.com
+ */
 class I2CIO
 {
 public:
-   /*!
+   /**
     @method
     @abstract   Constructor method
     @discussion Class constructor constructor.
     */
    I2CIO ( );
 
-   /*!
+   /**
     @method
     @abstract   Initializes the device.
     @discussion This method initializes the device allocating an I2C address.
@@ -67,7 +55,7 @@ public:
     */
    int begin ( const char *device, uint8_t i2cAddr );
 
-   /*!
+   /**
     @method
     @abstract   Sets the mode of a particular pin.
     @discussion Sets the mode of a particular pin to INPUT, OUTPUT. digitalWrite
@@ -78,7 +66,7 @@ public:
     */
    void pinMode ( uint8_t pin, uint8_t dir );
 
-   /*!
+   /**
     @method
     @abstract   Sets all the pins of the device in a particular direction.
     @discussion This method sets all the pins of the device in a particular
@@ -88,7 +76,7 @@ public:
     */
    void portMode ( uint8_t dir );
 
-   /*!
+   /**
     @method
     @abstract   Reads all the pins of the device that are configured as INPUT.
     @discussion Reads from the device the status of the pins that are configured
@@ -99,7 +87,7 @@ public:
     */
    uint8_t read ( void );
 
-   /*!
+   /**
     @method
     @abstract   Read a pin from the device.
     @discussion Reads a particular pin from the device. To read a particular
@@ -113,7 +101,7 @@ public:
     */
    uint8_t digitalRead ( uint8_t pin );
 
-   /*!
+   /**
     @method
     @abstract   Write a value to the device.
     @discussion Writes to a set of pins in the device. The value is the binary
@@ -128,7 +116,7 @@ public:
     */
    int write ( uint8_t value );
 
-   /*!
+   /**
     @method
     @abstract   Writes a digital level to a particular pin.
     @discussion Write a level to the indicated pin of the device. For this
@@ -144,11 +132,11 @@ public:
 
 
 private:
-   uint8_t _shadow;      // Shadow output
-   uint8_t _dirMask;     // Direction mask
-   uint8_t _i2cAddr;     // I2C address
-   bool    _initialised; // Initialised object
-   int _fd; // i2c device file descriptor
+   uint8_t _shadow;      //<! Shadow output
+   uint8_t _dirMask;     //<! Direction mask
+   uint8_t _i2cAddr;     //<! I2C address
+   bool    _initialised; //<! Initialised object
+   int _fd; //<! i2c device file descriptor
 
 };
 

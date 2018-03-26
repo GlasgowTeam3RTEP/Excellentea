@@ -1,7 +1,11 @@
 /** A class to control stepper motors.
- This class controls general stepper motors (connected via transistor arrays) by
- defining each step as HIGH or LOW values of the coils and cycling through them 
- after a defined interval.
+ *  This class controls general stepper motors (connected via transistor arrays) by
+ *  defining each step as HIGH or LOW values of the coils and cycling through them 
+ *  after a defined interval.
+ *
+ *  @version Excellentea 1.0
+ *
+ *  @author Simone Marcigaglia
  */
 
 #ifndef STEPPER_H

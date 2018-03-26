@@ -1,6 +1,10 @@
 /** A class defining a type of tea by its brewing time and temperature.
- Define a tea object in the context of Excellentea in terms of its brewing time 
- and temperature.
+ *  Define a tea object in the context of Excellentea in terms of its brewing time 
+ *  and temperature.
+ *
+ *  @version Excellentea 1.0
+ *  
+ *  @author Simone Marcigaglia
  */
 #ifndef TEA_H
 #define TEA_H

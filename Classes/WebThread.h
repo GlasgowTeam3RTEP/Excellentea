@@ -1,4 +1,8 @@
 /** A thread that handles the web interface.
+ * 
+ *  @version Excellentea 1.0
+ *
+ *  @author Simone Marcigaglia
  */
 
 #ifndef WEBTHREAD_H

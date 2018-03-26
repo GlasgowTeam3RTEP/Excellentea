@@ -1,8 +1,11 @@
+/**A general class for simple HIGH/LOW sensors.
+ *
+ *  @version Excellentea 1.0
+ *
+ *  @author Simone Marcigaglia
+ */
 #ifndef SENSOR_H
 #define SENSOR_H
-
-/**A general class for simple HIGH/LOW sensors.
- */
 
 class Sensor
 {

@@ -1,46 +1,10 @@
-// ---------------------------------------------------------------------------
-// Created by Francisco Malpartida on 20/08/11.
-// Copyright 2011 - Under creative commons license 3.0:
-//        Attribution-ShareAlike CC BY-SA
-//
-// This software is furnished "as is", without technical support, and with no 
-// warranty, express or implied, as to its usefulness for any purpose.
-//
-// Thread Safe: No
-// Extendable: Yes
-//
-// @file LCD.h
-// This file implements a basic liquid crystal library that comes as standard
-// in the Arduino SDK.
-// 
-// @brief 
-// This is a basic implementation of the LiquidCrystal library of the
-// Arduino SDK. This library is a refactored version of the one supplied
-// in the Arduino SDK in such a way that it simplifies its extension
-// to support other mechanism to communicate to LCDs such as I2C, Serial, SR, 
-// The original library has been reworked in such a way that this will be
-// the base class implementing all generic methods to command an LCD based
-// on the Hitachi HD44780 and compatible chipsets.
-//
-// This base class is a pure abstract class and needs to be extended. As reference,
-// it has been extended to drive 4 and 8 bit mode control, LCDs and I2C extension
-// backpacks such as the I2CLCDextraIO using the PCF8574* I2C IO Expander ASIC.
-//
-// The functionality provided by this class and its base class is identical
-// to the original functionality of the Arduino LiquidCrystal library.
-//
-// @version API 1.1.0
-//
-//
-// @author F. Malpartida - fmalpartida@gmail.com
-// ---------------------------------------------------------------------------
 #ifndef _LCD_H_
 #define _LCD_H_
 
 #include <unistd.h>
 #include <inttypes.h>
 
-/*!
+/**
  @defined 
  @abstract   All these definitions shouldn't be used unless you are writing 
  a driver.
@@ -98,7 +62,7 @@
 #define FOUR_BITS               2
 
 
-/*!
+/**
  @defined
  @abstract   Defines the duration of the home and clear commands
  @discussion This constant defines the time it takes for the home and clear
@@ -106,7 +70,7 @@
  */
 #define HOME_CLEAR_EXEC      2
 
-/*!
+/**
     @defined 
     @abstract   Backlight off constant declaration
     @discussion Used in combination with the setBacklight to swith off the
@@ -114,7 +78,7 @@
 */
 #define BACKLIGHT_OFF           0
 
-/*!
+/**
  @defined 
  @abstract   Backlight on constant declaration
  @discussion Used in combination with the setBacklight to swith on the
@@ -123,18 +87,49 @@
 #define BACKLIGHT_ON          255
 
 
-/*!
+/**
  @typedef 
  @abstract   Define backlight control polarity
  @discussion Backlight control polarity. @see setBacklightPin.
  */
 typedef enum { POSITIVE, NEGATIVE } t_backlighPol;
 
+/** A basic liquid crystal library that comes as standard in the Arduino SDK.
+ *  Created by Francisco Malpartida on 20/08/11.
+ *  Copyright 2011 - Under creative commons license 3.0:
+ *	Attribution-ShareAlike CC BY-SA
+ *
+ *  This software is furnished "as is", without technical support, and with no 
+ *  warranty, express or implied, as to its usefulness for any purpose.
+ *
+ *  Thread Safe: No
+ *  Extendable: Yes
+ *
+ *  This is a basic implementation of the LiquidCrystal library of the
+ *  Arduino SDK. This library is a refactored version of the one supplied
+ *  in the Arduino SDK in such a way that it simplifies its extension
+ *  to support other mechanism to communicate to LCDs such as I2C, Serial, SR, 
+ *  The original library has been reworked in such a way that this will be
+ *  the base class implementing all generic methods to command an LCD based
+ *  on the Hitachi HD44780 and compatible chipsets.
+ *
+ *  This base class is a pure abstract class and needs to be extended. As reference,
+ *  it has been extended to drive 4 and 8 bit mode control, LCDs and I2C extension
+ *  backpacks such as the I2CLCDextraIO using the PCF8574* I2C IO Expander ASIC.
+ *
+ *  The functionality provided by this class and its base class is identical
+ *  to the original functionality of the Arduino LiquidCrystal library.
+ *
+ *  @version API 1.1.0
+ *
+ *  @author F. Malpartida - fmalpartida@gmail.com
+ */
+
 class LCD
 {
 public:
 
-   /*!
+   /**
     @method
     @abstract   LiquidCrystal abstract constructor.
     @discussion LiquidCrystal class abstract constructor needed to create
@@ -142,7 +137,7 @@ public:
     */
    LCD ( );
 
-   /*!
+   /**
     @function
     @abstract   LCD initialization.
     @discussion Initializes the LCD to a given size (col, row). This methods
@@ -159,7 +154,7 @@ public:
     */
    virtual void begin(uint8_t cols, uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
 
-   /*!
+   /**
     @function
     @abstract   Clears the LCD.
     @discussion Clears the LCD screen and positions the cursor in the upper-left
@@ -171,7 +166,7 @@ public:
     */
    void clear();
    
-   /*!
+   /**
     @function
     @abstract   Sets the cursor to the upper-left corner.
     @discussion Positions the cursor in the upper-left of the LCD. 
@@ -184,7 +179,7 @@ public:
     */
    void home();
    
-   /*!
+   /**
     @function
     @abstract   Turns off the LCD display.
     @discussion Turns off the LCD display, without losing the text currently 
@@ -194,7 +189,7 @@ public:
     */
    void noDisplay();
    
-   /*!
+   /**
     @function
     @abstract   Turns on the LCD display.
     @discussion Turns on the LCD display, after it's been turned off with 
@@ -205,7 +200,7 @@ public:
     */
    void display();
    
-   /*!
+   /**
     @function
     @abstract   Turns off the blinking of the LCD cursor.
     
@@ -213,7 +208,7 @@ public:
     */
    void noBlink();
    
-   /*!
+   /**
     @function
     @abstract   Display the cursor of the LCD.
     @discussion Display the blinking LCD cursor. If used in combination with 
@@ -223,7 +218,7 @@ public:
     */
    void blink();
    
-   /*!
+   /**
     @function
     @abstract   Hides the LCD cursor.
     
@@ -231,7 +226,7 @@ public:
     */
    void noCursor();
    
-   /*!
+   /**
     @function
     @abstract   Display the LCD cursor.
     @discussion Display the LCD cursor: an underscore (line) at the location 
@@ -241,7 +236,7 @@ public:
     */
    void cursor();
    
-   /*!
+   /**
     @function
     @abstract   Scrolls the contents of the display (text and cursor) one space 
     to the left.
@@ -250,7 +245,7 @@ public:
     */
    void scrollDisplayLeft();
    
-   /*!
+   /**
     @function
     @abstract   Scrolls the contents of the display (text and cursor) one space 
     to the right.
@@ -259,7 +254,7 @@ public:
     */
    void scrollDisplayRight();
    
-   /*!
+   /**
     @function
     @abstract   Set the direction for text written to the LCD to left-to-right.
     @discussion Set the direction for text written to the LCD to left-to-right. 
@@ -272,7 +267,7 @@ public:
     */
    void leftToRight();
    
-   /*!
+   /**
     @function
     @abstract   Set the direction for text written to the LCD to right-to-left.
     @discussion Set the direction for text written to the LCD to right-to-left. 
@@ -285,7 +280,7 @@ public:
     */
    void rightToLeft();
    
-   /*!
+   /**
     @function
     @abstract   Moves the cursor one space to the left.
     @discussion 
@@ -294,7 +289,7 @@ public:
    void moveCursorLeft();
 
 
-   /*!
+   /**
     @function
     @abstract   Moves the cursor one space to the right.
 
@@ -302,7 +297,7 @@ public:
     */
    void moveCursorRight();
 
-   /*!
+   /**
     @function
     @abstract   Turns on automatic scrolling of the LCD.
     @discussion Turns on automatic scrolling of the LCD. This causes each 
@@ -317,7 +312,7 @@ public:
     */
    void autoscroll();
 
-   /*!
+   /**
     @function
     @abstract   Turns off automatic scrolling of the LCD.
     @discussion Turns off automatic scrolling of the LCD, this is the default
@@ -327,7 +322,7 @@ public:
     */
    void noAutoscroll();
 
-   /*!
+   /**
     @function
     @abstract   Creates a custom character for use on the LCD.
     @discussion Create a custom character (glyph) for use on the LCD. 
@@ -345,7 +340,7 @@ public:
     */
    void createChar(uint8_t location, uint8_t charmap[]);
 
-   /*!
+   /**
     @function
     @abstract   Position the LCD cursor.
     @discussion Sets the position of the LCD cursor. Set the location at which
@@ -356,7 +351,7 @@ public:
     */
    void setCursor(uint8_t col, uint8_t row);
 
-   /*!
+   /**
     @function
     @abstract   Switch-on the LCD backlight.
     @discussion Switch-on the LCD backlight.
@@ -365,7 +360,7 @@ public:
     */
    void backlight ( void );
 
-   /*!
+   /**
     @function
     @abstract   Switch-off the LCD backlight.
     @discussion Switch-off the LCD backlight.
@@ -374,7 +369,7 @@ public:
     */
    void noBacklight ( void );
 
-   /*!
+   /**
     @function
     @abstract   Switch on the LCD module.
     @discussion Switch on the LCD module, it will switch on the LCD controller
@@ -383,7 +378,7 @@ public:
     */
    void on ( void );
 
-   /*!
+   /**
     @function
     @abstract   Switch off the LCD module.
     @discussion Switch off the LCD module, it will switch off the LCD controller
@@ -395,7 +390,7 @@ public:
    //
    // virtual class methods
    // --------------------------------------------------------------------------
-   /*!
+   /**
     @function
     @abstract   Sets the pin to control the backlight.
     @discussion Sets the pin in the device to control the backlight.
@@ -407,7 +402,7 @@ public:
     */
    virtual void setBacklightPin ( uint8_t value, t_backlighPol pol ) { };
 
-   /*!
+   /**
     @function
     @abstract   Sets the pin to control the backlight.
     @discussion Sets the pin in the device to control the backlight. The behaviour
@@ -426,7 +421,7 @@ public:
     */
    virtual void setBacklight ( uint8_t value ) { };
 
-   /*!
+   /**
     @function
     @abstract   Writes to the LCD.
     @discussion This method writes character to the LCD in the current cursor
@@ -451,7 +446,7 @@ protected:
    t_backlighPol _polarity;   // Backlight polarity
 
 private:
-   /*!
+   /**
     @function
     @abstract   Send a command to the LCD.
     @discussion This method sends a command to the LCD by setting the Register
@@ -465,7 +460,7 @@ private:
     */
    void command(uint8_t value);
 
-   /*!
+   /**
     @function
     @abstract   Send a particular value to the LCD.
     @discussion Sends a particular value to the LCD. This is a pure abstract

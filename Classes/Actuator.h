@@ -1,10 +1,14 @@
-#ifndef ACTUATOR_H
-#define ACTUATOR_H
-
 /**A general class for external loads.
  This class merely allows the HIGH/LOW switching of pins ideal for external 
  loads connected through logic-level MOSFETs/transistor. 
+ 
+ @version Excellentea 1.0
+ 
+ @author Simone Marcigaglia
  */
+
+#ifndef ACTUATOR_H
+#define ACTUATOR_H
 
 class Actuator
 {

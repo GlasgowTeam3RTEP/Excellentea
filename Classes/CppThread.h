@@ -1,11 +1,13 @@
 #ifndef __CPP_THREAD_H_
 #define __CPP_THREAD_H_
 
-/**
- * GNU GENERAL PUBLIC LICENSE
- * Version 3, 29 June 2007
+/** A standard class for multi-thread programming in C++.
+ *  Abstract thread which contains the inner workings of the thread model.
+ *  @licence GNU GENERAL PUBLIC LICENSE
+ *  @version Version 3, 29 June 2007
  *
- * (C) 2018, Bernd Porr <mail@bernporr.me.uk>
+ *  (C) 2018, Bernd Porr <mail@bernporr.me.uk>
+ *  @author Bernd Porr
  **/
 
 #ifdef __linux__
@@ -17,8 +19,6 @@
 #include <windows.h>
 #endif
 
-
-// abstract thread which contains the inner workings of the thread model
 class CppThread {
 
 private:

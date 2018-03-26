@@ -1,4 +1,9 @@
-/**Class for the digital temperature sensor DS18B20. */
+/**Class for the digital temperature sensor DS18B20. 
+ *
+ *  @version Excellentea 1.0
+ *
+ *  @author Simone Marcigaglia
+ */
 
 #include "Sensor.h"
 #include <string>

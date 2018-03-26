@@ -1,37 +1,10 @@
-// ---------------------------------------------------------------------------
-// Created by Francisco Malpartida on 20/08/11.
-// Copyright 2011 - Under creative commons license 3.0:
-//        Attribution-ShareAlike CC BY-SA
-//
-// This software is furnished "as is", without technical support, and with no 
-// warranty, express or implied, as to its usefulness for any purpose.
-//
-// Thread Safe: No
-// Extendable: Yes
-//
-// @file LiquidCrystal.h
-// This file implements a basic liquid crystal library that comes as standard
-// in the Arduino SDK.
-// 
-// @brief 
-// This is a basic implementation of the LiquidCrystal library of the
-// Arduino SDK. The original library has been reworked in such a way that 
-// this class implements the all methods to command an LCD based
-// on the Hitachi HD44780 and compatible chipsets using the parallel port of
-// the LCD (4 bit and 8 bit).
-//
-//
-//
-// @author F. Malpartida - fmalpartida@gmail.com
-// ---------------------------------------------------------------------------
-#ifndef LiquidCrystal_4bit_h
-#define LiquidCrystal_4bit_h
+#ifndef LIQUIDCRYSTAL__h
+#define LIQUIDCRYSTAL_h
 
 #include <inttypes.h>
-
 #include "LCD.h"
 
-/*!
+/**
  @defined 
  @abstract   Command execution time on the LCD.
  @discussion This defines how long a command takes to execute by the LCD.
@@ -39,10 +12,29 @@
  */
 #define EXEC_TIME 37
 
+/** A basic implementation of the LiquidCrystal library of the Arduino SDK.
+ *  Created by Francisco Malpartida on 20/08/11.
+ *  Copyright 2011 - Under creative commons license 3.0:
+ *	Attribution-ShareAlike CC BY-SA
+ *
+ *  This software is furnished "as is", without technical support, and with no 
+ *  warranty, express or implied, as to its usefulness for any purpose.
+ *
+ *  Thread Safe: No
+ *  Extendable: Yes
+ *  
+ *  This is a basic implementation of the LiquidCrystal library of the
+ *  Arduino SDK. The original library has been reworked in such a way that 
+ *  this class implements the all methods to command an LCD based
+ *  on the Hitachi HD44780 and compatible chipsets using the parallel port of
+ *  the LCD (4 bit and 8 bit).
+ *
+ *  @author F. Malpartida - fmalpartida@gmail.com
+ */
 class LiquidCrystal : public LCD
 {
 public:
-   /*!
+   /**
     @method     
     @abstract   8 bit LCD constructors.
     @discussion Defines the pin assignment that the LCD will have.
@@ -64,7 +56,7 @@ public:
                  uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3,
                  uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7,
                  uint8_t backlightPin, t_backlighPol pol);   
-   /*!
+   /**
     @method     
     @abstract   4 bit LCD constructors.
     @discussion Defines the pin assignment that the LCD will have.
@@ -82,7 +74,7 @@ public:
    LiquidCrystal(uint8_t rs, uint8_t enable,
                  uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3,
                  uint8_t backlightPin, t_backlighPol pol);
-   /*!
+   /**
     @function
     @abstract   Send a particular value to the LCD.
     @discussion Sends a particular value to the LCD for writing to the LCD or
@@ -96,7 +88,7 @@ public:
     */
    virtual void send(uint8_t value, uint8_t mode);
    
-   /*!
+   /**
     @function
     @abstract   Sets the pin to control the backlight.
     @discussion Sets the pin in the device to control the backlight.
@@ -106,7 +98,7 @@ public:
     */
    void setBacklightPin ( uint8_t pin, t_backlighPol pol );
    
-   /*!
+   /**
     @function
     @abstract   Switch-on/off the LCD backlight.
     @discussion Switch-on/off the LCD backlight.
@@ -124,7 +116,7 @@ public:
    
 private:
    
-   /*!
+   /**
     @method     
     @abstract   Initializes the LCD pin allocation and associated HW
     @discussion Initializes the LCD pin allocation and configuration.
@@ -133,7 +125,7 @@ private:
              uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3,
              uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7);
    
-   /*!
+   /**
     @method     
     @abstract   Writes numBits bits from value value to the LCD.
     @discussion Writes numBists bits (the least significant) to the LCD control 
@@ -141,7 +133,7 @@ private:
     */   
    void writeNbits(uint8_t value, uint8_t numBits);
    
-   /*!
+   /**
     @method     
     @abstract   Pulse the LCD enable line (En).
     @discussion Sends a pulse of 1 uS to the Enable pin to execute an command
