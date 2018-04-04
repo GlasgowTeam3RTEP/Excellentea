@@ -23,8 +23,7 @@ private:
      */
     void run();
 
-private:
-    // Your private data
+    
 };
 
 #endif

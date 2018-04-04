@@ -25,7 +25,6 @@ double DS18B20::readTemp()
 	//One-wire bus on PIN 7 of the R-Pi
 	std::ifstream w1_file;
 	std::string raw;
-	//const std::string device_id = "28-0516a06e58ff";
 	int temp;
 
 	//Opens file and checks success of operation
