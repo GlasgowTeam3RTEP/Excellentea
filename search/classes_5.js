@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sensor',['Sensor',['../classSensor.html',1,'']]],
-  ['stepper',['Stepper',['../classStepper.html',1,'']]]
+  ['tea',['Tea',['../classTea.html',1,'']]]
 ];

@@ -97,12 +97,12 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 </div>
 <h1>Description</h1>
 <p class="">Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. It also comes with the option of controlling the machine using control buttons and an <a class="el" href="classLCD.html" title="A basic liquid crystal library that comes as standard in the Arduino SDK. ">LCD</a> display.</p>
+<h1>Installation</h1>
+<h2>Prerequisites</h2>
+<p class="">The application requires the user to have Apache and php installed on their Raspberry Pi. Use your favourite package manager to install the packages <em>apache2</em> and <em>php</em> or, alternatively, open the terminal and use the commands below. </p><div class="fragment"><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install apache2 php libapache2-mod-php -y</div></div><!-- fragment --><p> The One-wire and I2C protocols must be activated for the application to work. Run the following command: </p><div class="fragment"><div class="line">sudo raspi-config</div></div><!-- fragment --><p> and navigate to <em>Interfacing options</em> to enable <em>I2C</em> and <em>1-Wire</em>.</p>
+<h2>Installation procedure</h2>
+<p class="">Clone the repository to your Raspberry Pi and run the following commands: </p><div class="fragment"><div class="line">./configure</div><div class="line">make</div><div class="line">make install</div></div><!-- fragment --><p> Initialise and start the apache web interface (change the default pi with your user name): </p><div class="fragment"><div class="line">sudo chown -R pi /var/www/html/</div><div class="line">rm /var/www/html/index.html</div><div class="line">cp GUI/* /var/www/html/</div><div class="line">sudo reboot</div></div><!-- fragment --><p> Find your local IP with: </p><div class="fragment"><div class="line">hostname -I</div></div><!-- fragment --><p> The program can then be started by running the command </p><div class="fragment"><div class="line">sudo excellentea</div></div><!-- fragment --><p> from the terminal, and the web interface will be available at the IP address found previously. The web interface can then be accessed by external hosts by enabling router port forwarding.</p>
 <h1>Usage</h1>
-<h2>Installation</h2>
-<p class="">Clone the repository to your Raspberry Pi and run the following commands:</p>
-<div class="fragment"><div class="line">./configure</div><div class="line">make</div><div class="line">make install</div></div><!-- fragment --><p> The program can then be started by running the command</p>
-<div class="fragment"><div class="line">excellentea</div></div><!-- fragment --><p> from the terminal.</p>
-<h2>User operation</h2>
 <ol type="1">
 <li>Load your cup with water</li>
 <li>Load your tea infuser with the tea of your choice</li>
@@ -110,8 +110,10 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 <li>Choose the brewing mode of your tea</li>
 <li>Wait...tea is ready:)</li>
 </ol>
-<h1>Hardware</h1>
-<h2>Key components</h2>
+<h1>Configuration</h1>
+<p class="">An in-depth description of the project can be found on our <a href="https://github.com/GlasgowTeam3RTEP/Excellentea/wiki">wiki</a>. The following sections will briefly describe the main components and their implementation in the overall design.</p>
+<h2>Hardware</h2>
+<h3>Key components</h3>
 <ul>
 <li>1 Raspberry PI microcontroller board (tested on version 3 Model B)</li>
 <li>1 <a class="el" href="classStepper.html" title="A class to control stepper motors. ">Stepper</a> motor (MIKROE-1530)</li>
@@ -120,22 +122,19 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 <li>1 heating element (12V) (B004O8BGXE)</li>
 <li>1 tea infuser</li>
 <li>1 reed float sensor (59630)</li>
-<li>2 18-pin through hole socket (ED18DT)</li>
 <li>2 Darlington transistor array (ULN2803A)</li>
 <li><a class="el" href="classLCD.html" title="A basic liquid crystal library that comes as standard in the Arduino SDK. ">LCD</a></li>
 <li>2 N-channel logic-level MOSFET (FQP30N06L)</li>
 <li>MOSFET heat sink (507222B00000G)</li>
 </ul>
-<h2>Additional components</h2>
-<p class="">The project also requires standard passive components (e.g. resistors), prototyping tools (e.g. breadboard/pcb) and materials for the encasing. See the <a href="Main.sch">circuit schematics</a> for details.</p>
-<h2>Protocol</h2>
-<p class="">The digital temperature sensor <a class="el" href="classDS18B20.html" title="Class for the digital temperature sensor DS18B20. ">DS18B20</a> communicates with the board through a 1-wire protocol on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required.</p>
-<h2>Prerequisites</h2>
-<p class="">The raspberry PI must be connected to the internet for remote access.</p>
-<h1>Software</h1>
-<h2>Flow diagram</h2>
+<h3>Additional components</h3>
+<p class="">The project also requires standard passive components (e.g. resistors), prototyping tools (e.g. breadboard/pcb) and materials for the encasing. Check out our <a href="https://github.com/GlasgowTeam3RTEP/Excellentea/wiki">wiki</a> for details.</p>
+<h3>Protocol</h3>
+<p class="">The digital temperature sensor <a class="el" href="classDS18B20.html" title="Class for the digital temperature sensor DS18B20. ">DS18B20</a> communicates with the board through the one-wire protocol on pin 7 (BCM4). The reed float sensor only outputs two-states so a communication protocol is not required.</p>
+<h2>Software</h2>
+<p class="">The software was written to reflect the data flow depicted below. The float switch is used as a safety feature to ensure that the heating element cannot be switched on in the absence of water. Once the cup is full of water, the program will wait for a user interaction through the web interface (implemented as a second thread with a PHP script on an apache web server). The main thread will receive the signal to initiate the tea making procedure with two main parameters, the brewing temperature and the brewing time. The heating element is turned on and the temperature is monitored periodically via the sensor on the One-wire bus. Once the temperature reaches the desired value, the heating element is switched off and the preloaded tea infuser is lowered by the stepper motor. Once the desired brewing time has elapsed, the stepper motor rewinds the strainer and the tea is ready. Full software documentation can be found <a href="https://glasgowteam3rtep.github.io/Excellentea/">here</a>.</p>
 <div class="image">
-<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Images/Program_flow.png" alt="Flow Diagram" title="Flow diagram of the tea maker"/>
+<img src="https://github.com/GlasgowTeam3RTEP/ExcellenTea/blob/master/Images/Dataflow.png" alt="Data Flow" title="Flow diagram of the tea maker"/>
 </div>
 <h1>Authors</h1>
 <ul>
@@ -143,7 +142,7 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 <li><a href="https://github.com/CiaranAnthony"><b>Ciaran McGeady</b></a> - <em>Initial work</em></li>
 <li><a href="https://github.com/SimoneMarcigaglia"><b>Simone Marcigaglia</b></a> - <em>Initial work</em></li>
 </ul>
-<p class="">See also the list of <a href="https://github.com/GlasgowTeam3RTEP/ExcellenTea/contributors">contributors</a> who participated in this project.</p>
+<p class="">See also the list of <a href="https://github.com/GlasgowTeam3RTEP/ExcellenTea/contributors">contributors</a> who participated in this project. Check out our <a href="https://twitter.com/Excellentea1">Twitter</a> page to be up-to-date with the latest developments!</p>
 <h1>Contributing</h1>
 <p class="">Please read <a class="el" href="md_CONTRIBUTING.html">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
 <h1>License</h1>

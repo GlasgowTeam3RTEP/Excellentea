@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['i2cio',['I2CIO',['../classI2CIO.html',1,'']]]
+  ['lcd',['LCD',['../classLCD.html',1,'']]],
+  ['liquidcrystal',['LiquidCrystal',['../classLiquidCrystal.html',1,'']]],
+  ['liquidcrystal_5fi2c',['LiquidCrystal_I2C',['../classLiquidCrystal__I2C.html',1,'']]]
 ];

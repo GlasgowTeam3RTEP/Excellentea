@@ -1,10 +1,6 @@
 var hierarchy =
 [
     [ "Actuator", "classActuator.html", null ],
-    [ "CppThread", "classCppThread.html", [
-      [ "LocalThread", "classLocalThread.html", null ],
-      [ "WebThread", "classWebThread.html", null ]
-    ] ],
     [ "I2CIO", "classI2CIO.html", null ],
     [ "LCD", "classLCD.html", [
       [ "LiquidCrystal", "classLiquidCrystal.html", null ],
