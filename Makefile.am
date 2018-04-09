@@ -6,8 +6,6 @@ excellentea_SOURCES = excellentea.cpp \
 			Classes/Actuator.h \
 			Classes/BrewTimer.cpp \
 			Classes/BrewTimer.h \
-			Classes/ControllerThread.cpp \
-			Classes/ControllerThread.h \
 			Classes/CppThread.h \
 			Classes/CppTimer.h \
 			Classes/DS18B20.cpp \
@@ -20,6 +18,8 @@ excellentea_SOURCES = excellentea.cpp \
 			Classes/LiquidCrystal.h \
 			Classes/LiquidCrystal_I2C.cpp \
 			Classes/LiquidCrystal_I2C.h \
+			Classes/LocalThread.cpp \
+			Classes/LocalThread.h \
 			Classes/Sensor.cpp \
 			Classes/Sensor.h \
 			Classes/Stepper.cpp \

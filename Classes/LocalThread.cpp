@@ -61,75 +61,87 @@ void LocalThread::run() {
 	//Turn on LCD
 	lcd.on();
 	std::ostringstream strs;
-
-	//Check presence of water***
 	while (1) {
-		lcd.home();
-		if (water_sensor.readStatus()) {
-			//Print status on lcd
-			lcd.print("Not ready      ");
-			//change flag in configuration file
-			if (readTag("READY", configFile) == "YES") {
-				writeTag("READY", "NO", configFile);
+		//Initialise config file
+		writeTag("READY", "NO", configFile);
+		writeTag("MAKE", "NO", configFile);
+		writeTag("PROGR", "NO", configFile);
+		writeTag("DONE", "NO", configFile);
+
+		//Check presence of water***
+		while (1) {
+			lcd.home();
+			if (water_sensor.readStatus()) {
+				//Print status on lcd
+				lcd.print("Not ready      ");
+				//change flag in configuration file
+				if (readTag("READY", configFile) == "YES") {
+					writeTag("READY", "NO", configFile);
+				}
+			} else {
+				//Print status on lcd
+				lcd.print("READY!         ");
+				//change flag in configuration file
+				if (readTag("READY", configFile) == "NO") {
+					writeTag("READY", "YES", configFile);
+				}
+				if (readTag("MAKE", configFile) == "YES") {
+					break;
+				}
 			}
-		} else {
-			//Print status on lcd
-			lcd.print("READY!         ");
-			//change flag in configuration file
-			if (readTag("READY", configFile) == "NO") {
-				writeTag("READY", "YES", configFile);
-			}
-			if (readTag("MAKE", configFile) == "YES") {
-				break;
-			}
+			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+		//Read tea characteristics
+		double desired_temp = std::stod(readTag("TEMP", configFile));
+		double desired_time = std::stod(readTag("TIME", configFile));
+		Tea myTea(desired_temp, desired_time);
+
+		//Turn ON heating element***
+		heat_elem.switchOn();
+		lcd.clear();
+		lcd.print("Activating...");
+
+		//Update progress flag
+		writeTag("PROGR", "YES", configFile);
+
+		//Check water temperature***
+		lcd.clear();
+		lcd.print("Heating up...");
+		while (temp_sensor.readTemp() < myTea.getBrewTemperature()) {
+			lcd.setCursor(0, 1);
+			strs << "T= " << std::setprecision(5) << temp_sensor.readTemp() << " C   ";
+			lcd.print(strs.str().c_str());
+			strs.str(std::string());
+			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+		}
+
+		//Turn off heating element***
+		heat_elem.switchOff();
+
+		//Lower strainer***
+		strainer.spin(200, 20, 0);
+		lcd.clear();
+		lcd.print("Brewing...");
+
+		//Sleep for brewing time***
+		int duration = myTea.getBrewTime() * 60 * 1000;
+		std::this_thread::sleep_for(std::chrono::milliseconds(duration));
+
+		//Pull-up strainer***
+		strainer.spin(200, 20, 1);
+
+		//Update on progress***
+		lcd.clear();
+		lcd.print("Your tea is");
+		lcd.setCursor(0, 1);
+		lcd.print("ready!!!");
+		writeTag("DONE", "YES", configFile);
+		std::this_thread::sleep_for(std::chrono::milliseconds(15 * 60 * 1000));
 	}
-
-	//Read tea characteristics
-	double desired_temp = std::stod(readTag("TEMP", configFile));
-	double desired_time = std::stod(readTag("TIME", configFile));
-	Tea myTea(desired_temp, desired_time);
-
-	//Turn ON heating element***
-	heat_elem.switchOn();
-
-	//Check water temperature***
-	while (temp_sensor.readTemp() < myTea.getBrewTemperature()) {
-	}
-
-	//Turn off heating element***
-	heat_elem.switchOff();
-
-	//Lower strainer***
-
-	//Measure time elapsed***
-
-	//Pull-up strainer***
-
-	//Update on progress***
-
-
-	lcd.setCursor(0, 1);
-	strs << "T= " << std::setprecision(5) << temp_sensor.readTemp() << " C";
-	lcd.print(strs.str().c_str());
-	strs.str(std::string());
-	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 }
 
-
-//Tea myTea(temp, time);
-
-//Make tea***
-
-
-
-//Define finished procedure***
-
-
-}
-
-std::string WebThread::readTag(std::string tag, std::string filename) {
+std::string LocalThread::readTag(std::string tag, std::string filename) {
 	std::ifstream readFile(filename.c_str());
 	std::string line = "";
 	std::string fileTag = "";
@@ -150,7 +162,7 @@ std::string WebThread::readTag(std::string tag, std::string filename) {
 	return "not found";
 }
 
-void WebThread::writeTag(std::string tag, std::string value, std::string filename) {
+void LocalThread::writeTag(std::string tag, std::string value, std::string filename) {
 	std::string tempFile = "writeTag.tmp";
 	std::ifstream readFile(filename.c_str());
 	std::ofstream writeFile(tempFile.c_str());
@@ -177,6 +189,8 @@ void WebThread::writeTag(std::string tag, std::string value, std::string filenam
 
 	if (replaced) {
 		rename(tempFile.c_str(), filename.c_str());
+		//allow apache to read and modify contents
+		system("sudo chown -R www-data: /var/www/html");
 	} else {
 		remove(tempFile.c_str());
 	}
