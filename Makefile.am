@@ -3,7 +3,7 @@ AM_LDFLAGS =  -Wall -pthread -lwiringPi
 bin_PROGRAMS = excellentea
 excellentea_SOURCES = excellentea.cpp \
 			Classes/Actuator.cpp \
-			Classes/Actuator.h \	
+			Classes/Actuator.h \
 			Classes/DS18B20.cpp \
 			Classes/DS18B20.h \
 			Classes/I2CIO.cpp \
@@ -19,4 +19,4 @@ excellentea_SOURCES = excellentea.cpp \
 			Classes/Stepper.cpp \
 			Classes/Stepper.h \
 			Classes/Tea.cpp \
-			Classes/Tea.h 
+			Classes/Tea.h

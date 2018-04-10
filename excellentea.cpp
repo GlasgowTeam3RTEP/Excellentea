@@ -6,6 +6,7 @@
 #include "Classes/Tea.h"
 
 #include <chrono>
+#include <ctime>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -104,6 +105,7 @@ int main() {
 	temp_sensor.initialise();
 	strainer.initialise();
 	heat_elem.initialise();
+	heat_elem.switchOff();
 	lcd.begin(cols, rows);
 	std::cout << "Initialisation complete!!" << std::endl;
 
@@ -119,7 +121,8 @@ int main() {
 		writeTag("MAKE", "NO", configFile);
 		writeTag("PROGR", "NO", configFile);
 		writeTag("DONE", "NO", configFile);
-
+		lcd.clear();
+		
 		//Check presence of water***
 		while (1) {
 			lcd.home();
@@ -165,7 +168,7 @@ int main() {
 			lcd.setCursor(0, 1);
 			strs << "T= " << std::setprecision(5) << temp_sensor.readTemp() << " C     ";
 			lcd.print(strs.str().c_str());
-			std::cout<<strs.c_str()<<std::endl;
+			std::cout<<strs.str().c_str()<<std::endl;
 			strs.str(std::string());
 			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
@@ -186,9 +189,29 @@ int main() {
 		lcd.clear();
 		lcd.print("Brewing...");
 		std::cout<<"Brewing"<<std::endl;
-		int duration = myTea.getBrewTime() * 60 * 1000;
-		std::this_thread::sleep_for(std::chrono::milliseconds(duration));
-
+		int duration = myTea.getBrewTime() * 60 ;
+		
+		
+		clock_t begin = clock();
+		double time_elapsed = 0;
+		double time_left = 0;
+		int minutes_left = 0;
+		int seconds_left = 0;
+		
+		while ((double(clock()-begin)/ CLOCKS_PER_SEC*1000)<duration) {
+			time_elapsed = double(clock()-begin)/ CLOCKS_PER_SEC*1000;
+			time_left = duration - time_elapsed;
+			minutes_left = time_left/60;
+			seconds_left = (time_left/60 - (double(minutes_left)))*60;
+			
+			strs <<minutes_left<<":"<<seconds_left<<"      ";
+			lcd.setCursor(0,1);
+			lcd.print(strs.str().c_str());
+			std::cout<<strs.str().c_str()<< "left"<<std::endl;
+			strs.str(std::string());
+			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+		}
+  
 		//Pull-up strainer***
 		lcd.clear();
 		lcd.print("Pulling up");
@@ -204,7 +227,7 @@ int main() {
 		lcd.print("ready!!!");
 		std::cout<<"FINISHED"<<std::endl;
 		writeTag("DONE", "YES", configFile);
-		std::this_thread::sleep_for(std::chrono::milliseconds(15 * 60 * 1000));
+		std::this_thread::sleep_for(std::chrono::milliseconds(3 * 60 * 1000));
 	}
 }
 

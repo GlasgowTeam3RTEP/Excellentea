@@ -40,9 +40,11 @@
 		    $started = TRUE;
 		}
 
-	    } elseif ($tag == "DONE") {
-		if ($value == "YES") {
-		    $done == TRUE;
+	    } else {
+		if ($tag == "DONE") {
+		    if ($value == "YES") {
+			$done == TRUE;
+		    }
 		}
 	    }
         }
@@ -50,12 +52,13 @@
 	
 	if ($done) {
 	    echo "Your tea is ready!!!";
-	} elseif ($started) {
-	    echo "Your tea is being made :)";
 	} else {
-	    echo "Excellentea is preparing to make your tea.";
+	    if ($started) {
+		echo "Your tea is being made :)";
+	    } else {
+		echo "Excellentea is preparing to make your tea.";
+	    }
 	}
-	
     ?>
 
     </body>
