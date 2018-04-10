@@ -1,10 +1,9 @@
-#include "Actuator.h"
-#include "LocalThread.h"
-#include "DS18B20.h"
-#include "LiquidCrystal_I2C.h"
-#include "Sensor.h"
-#include "Stepper.h"
-#include "Tea.h"
+#include "Classes/Actuator.h"
+#include "Classes/DS18B20.h"
+#include "Classes/LiquidCrystal_I2C.h"
+#include "Classes/Sensor.h"
+#include "Classes/Stepper.h"
+#include "Classes/Tea.h"
 
 #include <chrono>
 #include <fstream>
@@ -76,7 +75,7 @@ int main() {
 	Sensor water_sensor(29); //PIN 12
 	DS18B20 temp_sensor(7, "28-0516a06e58ff"); //PIN 7 and bus id
 	Stepper strainer(22, 23, 24, 25, 64); //coils terminals and steps
-	Actuator heat_elem(5);
+	Actuator heat_elem(21);
 
 	//Define Display connection***
 	// i2c address
@@ -161,34 +160,49 @@ int main() {
 		//Check water temperature***
 		lcd.clear();
 		lcd.print("Heating up...");
+		std::cout<<"Heating up to "<< myTea.getBrewTemperature()<<"degrees."<<std::endl;
 		while (temp_sensor.readTemp() < myTea.getBrewTemperature()) {
 			lcd.setCursor(0, 1);
-			strs << "T= " << std::setprecision(5) << temp_sensor.readTemp() << " C   ";
+			strs << "T= " << std::setprecision(5) << temp_sensor.readTemp() << " C     ";
 			lcd.print(strs.str().c_str());
+			std::cout<<strs.c_str()<<std::endl;
 			strs.str(std::string());
 			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
 
 		//Turn off heating element***
 		heat_elem.switchOff();
-
+		std::cout<<"Heating element OFF"<<std::endl;
+		
 		//Lower strainer***
-		strainer.spin(200, 20, 0);
+		lcd.clear();
+		lcd.print("Lowering");
+		lcd.setCursor(0,1);
+		lcd.print("strainer");
+		std::cout<<"Strainer DOWN"<<std::endl;
+		strainer.spin(350, 27, 1);
+		
+		//Sleep for brewing time***
 		lcd.clear();
 		lcd.print("Brewing...");
-
-		//Sleep for brewing time***
+		std::cout<<"Brewing"<<std::endl;
 		int duration = myTea.getBrewTime() * 60 * 1000;
 		std::this_thread::sleep_for(std::chrono::milliseconds(duration));
 
 		//Pull-up strainer***
-		strainer.spin(200, 20, 1);
+		lcd.clear();
+		lcd.print("Pulling up");
+		lcd.setCursor(0,1);
+		lcd.print("strainer");
+		std::cout<<"Strainer UP"<<std::endl;
+		strainer.spin(350, 27,0);
 
 		//Update on progress***
 		lcd.clear();
 		lcd.print("Your tea is");
 		lcd.setCursor(0, 1);
 		lcd.print("ready!!!");
+		std::cout<<"FINISHED"<<std::endl;
 		writeTag("DONE", "YES", configFile);
 		std::this_thread::sleep_for(std::chrono::milliseconds(15 * 60 * 1000));
 	}

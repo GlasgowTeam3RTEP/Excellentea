@@ -19,7 +19,6 @@
 
     <body>
 
-
 	<?php
 	
 	ini_set('display_errors',1);
@@ -41,9 +40,7 @@
 		    $started = TRUE;
 		}
 
-	    } else
-	    
-	    if ($tag == "DONE") {
+	    } elseif ($tag == "DONE") {
 		if ($value == "YES") {
 		    $done == TRUE;
 		}

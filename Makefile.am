@@ -3,9 +3,7 @@ AM_LDFLAGS =  -Wall -pthread -lwiringPi
 bin_PROGRAMS = excellentea
 excellentea_SOURCES = excellentea.cpp \
 			Classes/Actuator.cpp \
-			Classes/Actuator.h \
-			Classes/BrewTimer.cpp \
-			Classes/BrewTimer.h \
+			Classes/Actuator.h \	
 			Classes/DS18B20.cpp \
 			Classes/DS18B20.h \
 			Classes/I2CIO.cpp \

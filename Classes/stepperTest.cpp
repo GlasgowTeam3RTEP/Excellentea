@@ -1,4 +1,4 @@
-#include "stepper.h"
+#include "Stepper.h"
 #include <iostream>
 
 int main()
@@ -6,8 +6,8 @@ int main()
 	int revs = 0;
 	int speed = 0;
 	bool direction;
-	stepper s1(25, 24, 22, 23, 64);
-	s1.initialize();
+	Stepper s1(25, 24, 22, 23, 64);
+	s1.initialise();
 	
 	std::cout<<"Insert number of revolutions: ";
 	std::cin>>revs;
