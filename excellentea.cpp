@@ -73,10 +73,10 @@ void writeTag(std::string tag, std::string value, std::string filename) {
 int main() {
 
 	//Define components***
-	Sensor water_sensor(29); //PIN 12
+	Sensor water_sensor(0); //PIN 12
 	DS18B20 temp_sensor(7, "28-0516a06e58ff"); //PIN 7 and bus id
-	Stepper strainer(22, 23, 24, 25, 64); //coils terminals and steps
-	Actuator heat_elem(21);
+	Stepper strainer(24, 23, 22, 21, 64); //coils terminals and steps
+	Actuator heat_elem(30);
 
 	//Define Display connection***
 	// i2c address
@@ -183,7 +183,7 @@ int main() {
 		lcd.setCursor(0,1);
 		lcd.print("strainer");
 		std::cout<<"Strainer DOWN"<<std::endl;
-		strainer.spin(350, 27, 1);
+		strainer.spin(350, 30, 0);
 		
 		//Sleep for brewing time***
 		lcd.clear();
@@ -218,7 +218,7 @@ int main() {
 		lcd.setCursor(0,1);
 		lcd.print("strainer");
 		std::cout<<"Strainer UP"<<std::endl;
-		strainer.spin(350, 27,0);
+		strainer.spin(350, 60,1);
 
 		//Update on progress***
 		lcd.clear();
