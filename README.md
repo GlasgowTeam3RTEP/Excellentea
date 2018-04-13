@@ -4,7 +4,7 @@
 
 Excellentea is an automatic tea maker. The user can operate the machine remotely through an online interface. 
 In other words, you can order your tea, by chosing from several modes, as you leave work and find it ready when you get home. 
-It also comes with the option of controlling the machine using control buttons and an LCD display.
+An LCD display provides feedback of the progress status. 
 
 # Installation
 
