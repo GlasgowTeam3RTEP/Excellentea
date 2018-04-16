@@ -57,6 +57,13 @@ from the terminal, and the web interface will be available at the IP address fou
 
 5. Wait...tea is ready:)
 
+Watch Excellentea in action:
+<p align="center">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Yk8ouI6cpxk
+" target="_blank"><img src="http://img.youtube.com/vi/Yk8ouI6cpxk/maxresdefault.jpg" 
+alt="Click to play" width="360" height="240" border="0" /></a>
+</p>
+
 # Configuration
 An in-depth description of the project can be found on our [wiki](https://github.com/GlasgowTeam3RTEP/Excellentea/wiki). The following sections will briefly describe the main components and their implementation in the overall design. 
 
